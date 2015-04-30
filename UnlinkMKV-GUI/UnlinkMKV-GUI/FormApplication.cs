@@ -22,9 +22,18 @@ namespace UnlinkMKV_GUI
         public FormApplication()
         {
             InitializeComponent();
+            
+            textOutput.Text = Properties.Settings.Default["input"].ToString();
+            textInput.Text = Properties.Settings.Default["output"].ToString();
 
-            textOutput.Text = Path.Combine(Environment.CurrentDirectory, "output");
-            textInput.Text = "C:\\Users\\Vaughan Hilts\\Desktop\\Test";
+
+            // Create the default path if needed
+            if (string.IsNullOrEmpty(textOutput.Text))
+            {
+                string defaultPath = Path.Combine(Environment.CurrentDirectory, "output");
+                Directory.CreateDirectory(defaultPath);
+                textOutput.Text = defaultPath;
+            }
 
             // Don't care
             CheckForIllegalCrossThreadCalls = false;
@@ -46,6 +55,8 @@ namespace UnlinkMKV_GUI
             optionList.Add(Tuple.Create("Ignore missing segments", "--ignore-missing-segments"));
 
             optionList.Add(Tuple.Create("Verbose output", "--ll TRACE"));
+
+
 
 
             foreach (var option in optionList)
@@ -151,7 +162,7 @@ namespace UnlinkMKV_GUI
 
         private string CleanEscape(string inputString)
         {
-            return Regex.Replace(inputString, @"\e\[(\d+;)*(\d+)?[ABCDHJKfmsu]", "");            
+            return Regex.Replace(inputString, @"\e\[(\d+;)*(\d+)?[ABCDHJKfmsu]", "");
         }
 
         private void PerformJob()
@@ -224,13 +235,21 @@ namespace UnlinkMKV_GUI
 
         private void FormApplication_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (_taskThread.IsAlive)
+            if (_taskThread != null && _taskThread.IsAlive)
             {
                 e.Cancel = true;
                 MessageBox.Show(
                     "The conversion process is not yet complete. Please abort the current job first before closing.",
                     "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            // Save settings
+            Properties.Settings.Default["input"] = textInput.Text;
+            Properties.Settings.Default["output"] = textOutput.Text;
+
+            // Save the settings to the disk
+            Properties.Settings.Default.Save();
+
         }
 
     }
