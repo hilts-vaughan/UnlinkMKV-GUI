@@ -44,6 +44,8 @@ Then, you should be able to run:
 
 **About Homebrew**: You will require the XCode Command Line Tools to use Homebrew; you can find a guide on that here: http://railsapps.github.io/xcode-command-line-tools.html
 
+You can then run the application with `mono UnlinkMKV-GUI.exe` or follow these directions to make it clickable in Finder: http://superuser.com/questions/67126/how-to-associate-the-exe-extension-to-be-opened-with-mono
+
 ## Linux
 
 If you're running on Linux, you will need to look up how to get the tools above from your local package repository via your package manager from your distribution of choice.
