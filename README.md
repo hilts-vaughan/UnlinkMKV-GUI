@@ -22,11 +22,17 @@ Following the below directions for getting the depedencies you might need:
 
 **Perl**: Strawberry Perl has been tested on Windows and works with this application. If you already have some Perl version of some sort installed, it will probably work and you can skip this. Otherwise, install Strawberry Perl from http://strawberryperl.com/ The latest version will be fine.
 
-**MKVToolnix**: Install from here and use the installer https://www.bunkus.org/videotools/mkvtoolnix/downloads.html (or you can download the ZIP and add it to your PATH, if you prefer)
+**MKVToolnix**: Install from here and use the installer https://www.bunkus.org/videotools/mkvtoolnix/downloads.html (or you can download the ZIP and add it to your PATH, if you prefer). Copy and note the install path you are putting down
 
 **FFmpeg**: This is optional, only required if you want to encode but you can find many guides on the internet to setting it up, such as this: http://jonhall.info/how_to/setup_and_use_ffmpeg_on_windows
 
 **.NET**: You should already have this.
+
+You'll need to add the MKVToolnix to your PATH as well. To do this:
+
+
+Select Computer from the Start menu (or hold Windows key and press Break), choose "Advanced System Settings", then the Advanced tab. Click on Environment Variables. Under System Variables, find PATH, and click on it. In the Edit window, modify PATH by adding a semicolon ";" at the end and then the path to your MKVtoolnix installation, e.g. C:\Program Files (x86)\MKVToolNix (wherever you installed it to, this should be different for different drive letters or 64 bit)
+
 
 
 ## OSX
