@@ -34,10 +34,7 @@ namespace UnlinkMKV_GUI
                 Directory.CreateDirectory(defaultPath);
                 textOutput.Text = defaultPath;
             }
-
-            // Don't care
-            CheckForIllegalCrossThreadCalls = false;
-
+  
             // Create our options
             CreateOptions();
         }
@@ -210,7 +207,7 @@ namespace UnlinkMKV_GUI
                 while (!perlJob.StandardOutput.EndOfStream)
                 {
                     string line = perlJob.StandardOutput.ReadLine();
-                    ExecuteSecure(() => textLog.AppendText(CleanEscape(line) + Environment.NewLine));
+                    ExecuteSecure(() => textLog.AppendText(CleanEscape(line) + Environment.NewLine));                    
                 }
 
                 _currProcess.WaitForExit();
