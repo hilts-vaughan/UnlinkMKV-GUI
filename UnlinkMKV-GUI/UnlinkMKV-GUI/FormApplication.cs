@@ -210,18 +210,11 @@ namespace UnlinkMKV_GUI
                 while (!perlJob.StandardOutput.EndOfStream)
                 {
                     string line = perlJob.StandardOutput.ReadLine();
-                    textLog.AppendText(CleanEscape(line) + Environment.NewLine);
+                    ExecuteSecure(() => textLog.AppendText(CleanEscape(line) + Environment.NewLine));
                 }
 
                 _currProcess.WaitForExit();
-                var error = _currProcess.StandardError.ReadToEnd();
-
-                var exitCode = perlJob.ExitCode;
-
-                if (exitCode != 0)
-                    MessageBox.Show("An error occured during this job", "Error", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-
+   
                 _currProcess = null;
             }
 
@@ -231,6 +224,14 @@ namespace UnlinkMKV_GUI
 
             buttonExecute.Enabled = true;
             buttonAbort.Enabled = false;
+        }
+
+        private void ExecuteSecure(Action a)
+        {
+            if (InvokeRequired)
+                BeginInvoke(a);
+            else
+                a();
         }
 
         private void FormApplication_FormClosing(object sender, FormClosingEventArgs e)
