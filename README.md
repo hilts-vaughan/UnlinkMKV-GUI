@@ -76,6 +76,7 @@ After installing all the depedencies, just run the application.
 
 The check boxes should be left unchecked for the most part unless you have a particular issue with a release. You can play around with them and file a bug report if a certain MKV file is not working.
 
+If you get "unlinked finished" immediately and no output, make sure you have installed the Perl logging module. See the section above for 'Every operating system'
 
 # I found a bug/the application doesn't Unlink my MKV's properly. Help?
 
