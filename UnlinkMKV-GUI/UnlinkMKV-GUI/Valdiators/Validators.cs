@@ -18,7 +18,7 @@ namespace UnlinkMKV_GUI.Valdiators
 
         public bool IsRequirementMet()
         {
-            
+
             // Check for the path's to the tools we required
             try
             {
@@ -26,7 +26,6 @@ namespace UnlinkMKV_GUI.Valdiators
                 PathUtility.FindExePath("mkvextract.exe");
                 PathUtility.FindExePath("mkvinfo.exe");
                 PathUtility.FindExePath("mkvmerge.exe");
-                PathUtility.FindExePath("ffmpeg.exe");
             }
             catch (FileNotFoundException exception)
             {
@@ -38,6 +37,51 @@ namespace UnlinkMKV_GUI.Valdiators
 
         public bool AttemptFixRequirement()
         {
+            int p = (int)Environment.OSVersion.Platform;
+            if ((p == 4) || (p == 6) || (p == 128))
+            {
+                return false;
+            }
+
+
+            // Attempt to find them in the path and adjust the path silently, so there's no errors    
+        
+
+            // It looks like it was installed on C:
+            foreach (var drive in Directory.GetLogicalDrives())
+            {
+                var hasNixInstalled = string.Format(@"{0}Program Files (x86)\MKVToolNix\", drive);
+
+                if (Directory.Exists(hasNixInstalled) && File.Exists(Path.Combine(hasNixInstalled, "mkvinfo.exe")))
+                {
+                    var modPath = Environment.GetEnvironmentVariable("PATH") + ";" + hasNixInstalled;
+
+                    // OK, looks like it was installed in the default directory
+                    Environment.SetEnvironmentVariable("PATH",
+                        modPath);
+
+                    PathUtility.ExceptionalPath = modPath;
+
+                    return true;
+                }
+
+
+                var hasNixInstalled32 = string.Format(@"{0}Program Files\MKVToolNix\", drive);
+
+
+                if (Directory.Exists(hasNixInstalled32) && File.Exists(Path.Combine(hasNixInstalled32, "mkvinfo.exe")))
+                {
+                    var modPath = Environment.GetEnvironmentVariable("PATH") + ";" + hasNixInstalled32;
+                    // OK, looks like it was installed in the default directory
+                    Environment.SetEnvironmentVariable("PATH",
+                        modPath);
+
+                    PathUtility.ExceptionalPath = modPath;
+
+                    return true;
+                }
+            }
+
             MessageBox.Show(
                 "MKVToolNix and/or FFMPEG are missing from your system path. Please refer to the manual provided to install them for your platform.");
             return false;
@@ -85,7 +129,7 @@ namespace UnlinkMKV_GUI.Valdiators
             // Check for the path's to the tools we required
             try
             {
-           
+
 
                 PathUtility.FindExePath("perl.exe");
             }

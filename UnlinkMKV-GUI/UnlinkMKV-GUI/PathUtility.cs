@@ -9,6 +9,11 @@ namespace UnlinkMKV_GUI
 {
     public static class PathUtility
     {
+
+
+        public static string ExceptionalPath = "";
+
+
         // Thanks!
         // http://csharptest.net/526/how-to-search-the-environments-path-for-an-exe-or-dll/
 

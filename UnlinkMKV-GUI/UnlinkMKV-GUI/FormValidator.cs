@@ -26,8 +26,8 @@ namespace UnlinkMKV_GUI
         private void CheckRequirements()
         {
             var validatorTasks = new List<IValidatorTask>();
-            validatorTasks.Add(new MkvToolNixValidatorTask());
             validatorTasks.Add(new IsAdministratorValidatorTask());
+            validatorTasks.Add(new MkvToolNixValidatorTask());;
             validatorTasks.Add(new PerlExistsValidatorTask());
 
             foreach (var task in validatorTasks)

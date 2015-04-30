@@ -28,8 +28,9 @@ Following the below directions for getting the depedencies you might need:
 
 **.NET**: You should already have this.
 
-You'll need to add the MKVToolnix to your PATH as well. To do this:
+If you get issues with "MKVToolnix" not found, you'll need to add the MKVToolnix to your PATH as well. The application will try and out detect it and will succeed if you use the above installer version.
 
+Otherwise, do this:
 
 Select Computer from the Start menu (or hold Windows key and press Break), choose "Advanced System Settings", then the Advanced tab. Click on Environment Variables. Under System Variables, find PATH, and click on it. In the Edit window, modify PATH by adding a semicolon ";" at the end and then the path to your MKVtoolnix installation, e.g. C:\Program Files (x86)\MKVToolNix (wherever you installed it to, this should be different for different drive letters or 64 bit)
 
@@ -74,6 +75,7 @@ After installing all the depedencies, just run the application.
 * Output Folder: Just select where you want the files to be placed
 
 The check boxes should be left unchecked for the most part unless you have a particular issue with a release. You can play around with them and file a bug report if a certain MKV file is not working.
+
 
 # I found a bug/the application doesn't Unlink my MKV's properly. Help?
 

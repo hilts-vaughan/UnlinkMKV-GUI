@@ -22,7 +22,7 @@ namespace UnlinkMKV_GUI
         public FormApplication()
         {
             InitializeComponent();
-            
+
             textOutput.Text = Properties.Settings.Default["output"].ToString();
             textInput.Text = Properties.Settings.Default["input"].ToString();
 
@@ -34,7 +34,7 @@ namespace UnlinkMKV_GUI
                 Directory.CreateDirectory(defaultPath);
                 textOutput.Text = defaultPath;
             }
-  
+
             // Create our options
             CreateOptions();
         }
@@ -45,8 +45,23 @@ namespace UnlinkMKV_GUI
 
             var optionList = new List<Tuple<string, string>>();
 
-            optionList.Add(Tuple.Create("Fix audio", "--fix-audio"));
-            optionList.Add(Tuple.Create("Fix video", "--fix-video"));
+            bool foundMpeg = true;
+
+            try
+            {
+                PathUtility.FindExePath("ffmpeg.exe");
+            }
+            catch (FileNotFoundException exception)
+            {
+                foundMpeg = false;
+            }
+
+            if (foundMpeg)
+            {
+                optionList.Add(Tuple.Create("Fix audio", "--fix-audio"));
+                optionList.Add(Tuple.Create("Fix video", "--fix-video"));
+            }
+
             optionList.Add(Tuple.Create("Fix subtitles", "--fix-subtitles"));
             optionList.Add(Tuple.Create("Ignore default flag", "--ignore-default-flag"));
             optionList.Add(Tuple.Create("Ignore missing segments", "--ignore-missing-segments"));
@@ -184,17 +199,26 @@ namespace UnlinkMKV_GUI
                 var quotedFile = "\"" + file + "\"";
                 var argument = "\"" + perlScript + "\" " + perlParams + " " + outDirectory + " " + quotedFile;
 
-                var perlJob = new Process
+                // PathUtility.ExceptionalPath
+                var startInfo = new ProcessStartInfo
                 {
-                    StartInfo = new ProcessStartInfo
-                    {
-                        FileName = perlPath,
-                        Arguments = argument,
-                        UseShellExecute = false,
-                        RedirectStandardOutput = true,
-                        RedirectStandardError = true,
-                        CreateNoWindow = true
-                    }
+                    FileName = perlPath,
+                    Arguments = argument,
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    CreateNoWindow = true
+                };
+
+                // Add the path if required to the Perl executing path
+                if (!string.IsNullOrEmpty(PathUtility.ExceptionalPath))
+                {
+                    startInfo.EnvironmentVariables["PATH"] = PathUtility.ExceptionalPath;
+                }
+
+                var perlJob = new Process()
+                {
+                    StartInfo = startInfo
                 };
 
 
