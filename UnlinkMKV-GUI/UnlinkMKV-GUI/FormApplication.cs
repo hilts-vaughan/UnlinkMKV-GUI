@@ -23,8 +23,8 @@ namespace UnlinkMKV_GUI
         {
             InitializeComponent();
             
-            textOutput.Text = Properties.Settings.Default["input"].ToString();
-            textInput.Text = Properties.Settings.Default["output"].ToString();
+            textOutput.Text = Properties.Settings.Default["output"].ToString();
+            textInput.Text = Properties.Settings.Default["input"].ToString();
 
 
             // Create the default path if needed
@@ -217,8 +217,8 @@ namespace UnlinkMKV_GUI
 
 
             // End the job
-            MessageBox.Show("The unlinking is complete!", "Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            ExecuteSecure(() => MessageBox.Show("The unlinking is complete!", "Complete", MessageBoxButtons.OK, MessageBoxIcon.Information));
+            
             buttonExecute.Enabled = true;
             buttonAbort.Enabled = false;
         }
