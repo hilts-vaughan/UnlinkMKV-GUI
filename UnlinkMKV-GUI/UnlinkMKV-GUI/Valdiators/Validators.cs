@@ -53,6 +53,15 @@ namespace UnlinkMKV_GUI.Valdiators
 
         public bool IsRequirementMet()
         {
+
+            // If we're not on Windows, remove ".EXE"
+            int p = (int)Environment.OSVersion.Platform;
+            if ((p == 4) || (p == 6) || (p == 128))
+            {
+                return true;
+            }
+
+
             return (new WindowsPrincipal(WindowsIdentity.GetCurrent()))
               .IsInRole(WindowsBuiltInRole.Administrator);
         }

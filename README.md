@@ -1,7 +1,7 @@
 # What is it?
 
 
-Provides a GUI interface for the UnlinkMKV project by Garret Noling. Aditionally, incorpoates changes from Shane Panke to run cross-platform and provide unified support over many different operating systems.
+Provides a GUI interface for the UnlinkMKV project by Garret Noling. Modified to run cross-platform and provide unified support over many different operating systems.
 
 UnlinkMKV: https://github.com/gnoling/UnlinkMKV
 
@@ -56,6 +56,7 @@ You will probably need `Log::Log4perl` for your Perl installation. You can do th
 2. Type `cpan Log::Log4perl` and then press return/enter
 3. The CPAN manager should install the logging module, you should be able to exit the terminal now.
 
+If you are using Mono, the first run always takes a little bit (about a minute). Please be patient.
 
 # Using the application
 
