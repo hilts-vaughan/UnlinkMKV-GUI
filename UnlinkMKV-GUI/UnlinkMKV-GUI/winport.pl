@@ -127,7 +127,7 @@ use File::Path qw(make_path remove_tree);
 
     sub DESTROY {
 	my $self = shift;
-	remove_tree("$self->{tmp}");
+	#remove_tree("$self->{tmp}");
 	DEBUG "removed tmp $self->{tmp} [exiting]";
     }
 
@@ -356,7 +356,7 @@ use File::Path qw(make_path remove_tree);
 	    more();
 	    if(scalar(@splits) > 0) {
 		DEBUG "splitting file: $item";
-		$self->sys($self->{opt}->{mkvmerge}, '--no-chapters', '-o', "$self->{tmp}/parts/split-%03d.mkv", "\"$item\"", '--split', 'timecodes:' . join(',',@splits));
+		$self->sys($self->{opt}->{mkvmerge}, '--no-chapters', '-o', "\"$self->{tmp}/parts/split-%03d.mkv\"", "\"$item\"", '--split', 'timecodes:' . join(',',@splits));
 	    }
 	    less();
 
@@ -594,7 +594,7 @@ use File::Path qw(make_path remove_tree);
 		$link =~ s/([\/]+)/\\/g;
 		$file =~ s/([\/]+)/\\/g;
 
-		$self->sys('cmd', '/c', 'mklink', "$self->{tmp}\\parts\\$link", "\"$file\"");
+		$self->sys('cmd', '/c', 'mklink',  "\"$self->{tmp}\\parts\\$link\"", "\"$file\"");
 	} else {
 		$self->sys('/bin/ln', '-s',  "\"$file\"", "\"$self->{tmp}/parts/$link\"");
 	}

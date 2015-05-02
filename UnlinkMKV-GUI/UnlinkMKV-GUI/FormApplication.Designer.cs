@@ -37,10 +37,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textLog = new System.Windows.Forms.RichTextBox();
             this.buttonExecute = new System.Windows.Forms.Button();
             this.buttonAbort = new System.Windows.Forms.Button();
             this.buttonIssues = new System.Windows.Forms.Button();
-            this.textLog = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -129,6 +130,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Output Log";
             // 
+            // textLog
+            // 
+            this.textLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textLog.Location = new System.Drawing.Point(3, 16);
+            this.textLog.Name = "textLog";
+            this.textLog.ReadOnly = true;
+            this.textLog.Size = new System.Drawing.Size(521, 128);
+            this.textLog.TabIndex = 0;
+            this.textLog.Text = "";
+            // 
             // buttonExecute
             // 
             this.buttonExecute.Location = new System.Drawing.Point(430, 421);
@@ -160,21 +171,22 @@
             this.buttonIssues.Text = "Known MKV issues";
             this.buttonIssues.UseVisualStyleBackColor = true;
             // 
-            // textLog
+            // label3
             // 
-            this.textLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textLog.Location = new System.Drawing.Point(3, 16);
-            this.textLog.Name = "textLog";
-            this.textLog.ReadOnly = true;
-            this.textLog.Size = new System.Drawing.Size(521, 128);
-            this.textLog.TabIndex = 0;
-            this.textLog.Text = "";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(34, 400);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(484, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Please note: Input and output folders on network paths (unmapped networks) are un" +
+    "supported. Sorry!";
             // 
             // FormApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 456);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonIssues);
             this.Controls.Add(this.buttonAbort);
             this.Controls.Add(this.buttonExecute);
@@ -215,6 +227,7 @@
         private System.Windows.Forms.Button buttonIssues;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.RichTextBox textLog;
+        private System.Windows.Forms.Label label3;
     }
 }
 
