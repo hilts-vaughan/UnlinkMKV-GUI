@@ -127,7 +127,7 @@ use File::Path qw(make_path remove_tree);
 
     sub DESTROY {
 	my $self = shift;
-	#remove_tree("$self->{tmp}");
+	remove_tree("$self->{tmp}");
 	DEBUG "removed tmp $self->{tmp} [exiting]";
     }
 
@@ -194,7 +194,11 @@ use File::Path qw(make_path remove_tree);
 	    my $last_time_end            = '00:00:00.000000000';
 	    my $offset                   = '00:00:00.000000000';
 	    my $chaptercount             = 1;
+
+	    INFO "Checking for editions...";
+
 	    foreach my $edition ($xml->findnodes('//EditionFlagDefault[.=0]')) {
+	    	DEBUG "Edition(s) found....";
 		if(!$self->{opt}->{ignoredefaultflag}) {
 		    $edition->parentNode->unbindNode;
 		    WARN "non-default chapter dropped";
@@ -203,6 +207,22 @@ use File::Path qw(make_path remove_tree);
 		    INFO "non-default chapter kept on purpose";
 		}
 	    }
+
+	    # Some releases like 'Serial Experiment Lain' do some really dumb stuff
+	    # and don't even bother setting the default ChapterFlag properly; this causes
+	    # all hell to break loose later. We check that case here, if there are multiple
+	    # then we'll just drop one of them and assume it was a mistake
+	    my @edition_nodes = $xml->findnodes('//EditionFlagDefault[.=1]');
+		if(@edition_nodes > 1) {
+			INFO "Detected multiple default editions... we'll drop all but the first";
+			for (my $i=1; $i < @edition_nodes; $i++) {
+   				INFO "Unbound an edition";
+   				@edition_nodes[$i]->parentNode->unbindNode;
+			}
+		}
+
+	    INFO "Done checking for editions...";
+
 	    foreach my $chapter ($xml->findnodes('//ChapterAtom')) {
 		my ($ChapterTimeStart) = $chapter->findnodes('./ChapterTimeStart/text()');
 		my ($ChapterTimeEnd)   = $chapter->findnodes('./ChapterTimeEnd/text()');
@@ -284,10 +304,12 @@ use File::Path qw(make_path remove_tree);
 	    INFO "checking that all required segments were found";
 	    my $okay_to_proceed = 1;
 	    for (@segments) {
+
 		if(defined $_->{id} && !defined $_->{file}) {
 		    DEBUG "missing segment: $_->{id}";
 		    $okay_to_proceed = 0;
 		}
+
 	    }
 	    if(!$okay_to_proceed) {
 		WARN "missing segments!";
@@ -355,7 +377,6 @@ use File::Path qw(make_path remove_tree);
 	    INFO "creating splits";
 	    more();
 	    if(scalar(@splits) > 0) {
-		DEBUG "splitting file: $item";
 		$self->sys($self->{opt}->{mkvmerge}, '--no-chapters', '-o', "\"$self->{tmp}/parts/split-%03d.mkv\"", "\"$item\"", '--split', 'timecodes:' . join(',',@splits));
 	    }
 	    less();
@@ -365,13 +386,14 @@ use File::Path qw(make_path remove_tree);
 	    my (@parts, $LAST);
 	    my $count = 1;
 	    foreach my $segment (@segments) {
-		if(defined $segment->{id} && $segment->{start} =~ /^00:00:00\./ || ($LAST ne $segment->{file} && scalar(@splits) == 0)) {
-		    DEBUG "part $segment->{file}";
+	    	
+		if(defined $segment->{id} || ($LAST ne $segment->{file} && scalar(@splits) == 0)) {
+		    DEBUG "part (Branch 1)  $segment->{file}";
 		    push @parts, $segment->{file};
 		}
 		elsif($LAST ne $segment->{file}) {
 		    my $f = sprintf("$self->{tmp}/parts/split-%03d.mkv",$count);
-		    DEBUG "part $f";
+		    DEBUG "part (Branch 2) $f";
 		    push @parts, $f;
 		    $count++;
 		}
