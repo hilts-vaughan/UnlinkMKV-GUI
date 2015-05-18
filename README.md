@@ -1,3 +1,5 @@
+**You can download up at the top under 'releases'!**
+
 # What is it?
 
 
