@@ -349,7 +349,7 @@ use File::Path qw(make_path remove_tree);
 		    }
 		}
 		close $H;
-		if (defined @{$seg->{attachments}} && @{$seg->{attachments}} > 0) {
+		if (exists $seg->{attachments} && @{$seg->{attachments}} > 0) {
 		    my $dir = cwd();
 		    TRACE "chdir $self->{tmp}/attach";
 		    chdir("$self->{tmp}/attach");
@@ -482,7 +482,7 @@ use File::Path qw(make_path remove_tree);
 			@aopt = undef;
 			@aopt = qw/-map 0 -acodec ac3 -ab 320k/;
 		    }
-		    $self->sys($self->{opt}->{ffmpeg}, '-i', "\"" . $part . "\"", @vopt, @aopt, "\"" . "$part-fixed.mkv" . "\"");
+		    $self->sys($self->{opt}->{ffmpeg}, '-i', "\"" . $part . "\"", @vopt, @aopt, "\"" . "$part-fixed.mkv" . "\"", '2>&1');
 		    $self->replace($part, "$part-fixed.mkv");
 		}
 		less();
@@ -555,7 +555,7 @@ use File::Path qw(make_path remove_tree);
 	my $file = shift;
 	my $size = int(((-s $file)/1024+.5)*1.1);
 	my $br   = 2000;
-	foreach my $line (split /\n/, $self->sys($self->{opt}->{ffmpeg}, '-i', $file)) {
+	foreach my $line (split /\n/, $self->sys($self->{opt}->{ffmpeg}, '-i', $file, '2>&1')) {
 	    if($line =~ /duration: (\d+):(\d+):(\d+\.\d+),/i) {
 		my $duration = ($1*3600)+($2*60)+int($3+.5);
 		$br = int(($size / $duration)+.5);
@@ -626,7 +626,7 @@ use File::Path qw(make_path remove_tree);
 
 
     # We use this instead of CRC32 so we can avoid requiring compiling native C code for usage
-	sub mycrc32 {
+    sub mycrc32 {
 	 my ($input, $init_value, $polynomial) = @_;
 
 	 $init_value = 0 unless (defined $init_value);
@@ -655,7 +655,7 @@ use File::Path qw(make_path remove_tree);
 	 $crc = $crc ^ 0xffffffff;
 
 	 return $crc;
-	}
+    }
 
 
 
@@ -808,8 +808,8 @@ use File::Path qw(make_path remove_tree);
 	my ($pid, $in, $out, $err, $sel, $buf);
 	my $cmd = "$app @_";
 	TRACE "sys > $cmd";
-  my $dbuffer = `$cmd`;
-    return $dbuffer;
+	my $dbuffer = `$cmd`;
+	return $dbuffer;
 
 	$err = gensym();
 	more();
@@ -817,7 +817,7 @@ use File::Path qw(make_path remove_tree);
 	$pid = open3($in, $out, $err, $app, @_) or LOGDIE "failed to open $app: @_";
 	$sel = new IO::Select;
 	$sel->add($out,$err);
-	SYSLOOP: while(my @ready = $sel->can_read) {
+	while(my @ready = $sel->can_read) {
 	    foreach my $fh (@ready) {
 		my $line = <$fh>;
 		if(not defined $line) {
