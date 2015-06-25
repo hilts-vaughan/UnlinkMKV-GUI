@@ -349,7 +349,7 @@ use File::Path qw(make_path remove_tree);
 		    }
 		}
 		close $H;
-		if (defined @{$seg->{attachments}} && @{$seg->{attachments}} > 0) {
+		if (exists $seg->{attachments} && @{$seg->{attachments}} > 0) {
 		    my $dir = cwd();
 		    TRACE "chdir $self->{tmp}/attach";
 		    chdir("$self->{tmp}/attach");
