@@ -221,7 +221,7 @@ use File::Path qw(make_path remove_tree);
 			}
 		}
 
-`	    # Drop the ordered flag if it exists, since the eventual output will not be
+	    # Drop the ordered flag if it exists, since the eventual output will not be
 	    # ordered anymore and this flag can cause playback issues with some players
 	    foreach my $ordered ($xml ->findnodes('//EditionFlagOrdered')) {
 		$ordered->unbindNode;
