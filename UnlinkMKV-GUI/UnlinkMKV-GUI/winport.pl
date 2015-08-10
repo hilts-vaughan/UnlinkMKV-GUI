@@ -113,6 +113,7 @@ use IO::Select;
 use Symbol;
 use Cwd            qw/cwd realpath abs_path/;
 use File::Path qw(make_path remove_tree);
+use File::Copy qw(copy);
 
     sub new {
         my $type      = shift;
@@ -550,7 +551,7 @@ use File::Path qw(make_path remove_tree);
 	    INFO "moving built file to final destination";
 	    more();
 	    make_path("$self->{opt}->{outdir}");
-	    rename("$self->{tmp}/encodes/".basename($item), "$self->{opt}->{outdir}/".basename($item));
+		copy("$self->{tmp}/encodes/".basename($item), "$self->{opt}->{outdir}/".basename($item)) or die "Copy failed! Aborting...: $!";
 	    less();
 	}
 	$self->mktmp();
