@@ -47,13 +47,13 @@ namespace UnlinkMKV_GUI {
 
             if (foundMpeg)
             {
-                optionList.Add(Tuple.Create("Fix audio", "--fix-audio"));
-                optionList.Add(Tuple.Create("Fix video", "--fix-video"));
+                optionList.Add(Tuple.Create("Fix audio", "--fixaudio"));
+                optionList.Add(Tuple.Create("Fix video", "--fixvideo"));
             }
 
-            optionList.Add(Tuple.Create("Fix subtitles", "--fix-subtitles"));
-            optionList.Add(Tuple.Create("Ignore default flag", "--ignore-default-flag"));
-            optionList.Add(Tuple.Create("Ignore missing segments", "--ignore-missing-segments"));
+            optionList.Add(Tuple.Create("Fix subtitles", "--fixsubtitles"));
+            optionList.Add(Tuple.Create("Ignore default flag", "--ignoredefaultflag"));
+            optionList.Add(Tuple.Create("Ignore missing segments", "--ignoremissingsegments"));
 
             optionList.Add(Tuple.Create("Verbose output", "--ll TRACE"));
 
@@ -169,7 +169,17 @@ namespace UnlinkMKV_GUI {
             var merge = PathUtility.FindExePath("mkvmerge.exe");
             var info = PathUtility.FindExePath("mkvinfo.exe");
             var extract = PathUtility.FindExePath("mkvextract.exe");
-            var ffmpeg = PathUtility.FindExePath("ffmpeg.exe");
+            var ffmpeg = "";
+
+
+            try
+            {
+               ffmpeg = PathUtility.FindExePath("ffmpeg.exe");
+            }
+            catch(Exception e)
+            {
+                // Do nothing
+            }
 
             config.OutputPath = textOutput.Text;
             config.SetRequiredPaths(ffmpeg, extract, info, merge);
