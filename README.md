@@ -1,4 +1,5 @@
 **You can download up at the top under 'releases'!**
+** Please Note: This application only works properly if your system locale is set to English**
 
 # What is it?
 
