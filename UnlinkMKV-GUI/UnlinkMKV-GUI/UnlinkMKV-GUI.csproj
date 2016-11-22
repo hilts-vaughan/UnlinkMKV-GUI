@@ -44,6 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="data\Chapter.cs" />
+    <Compile Include="data\IMkvInfoSummaryMapper.cs" />
+    <Compile Include="data\MkvAttachment.cs" />
+    <Compile Include="data\ChapterAtom.cs" />
+    <Compile Include="data\MkvEdition.cs" />
+    <Compile Include="data\MKVInfo.cs" />
+    <Compile Include="data\MkvSegmentUid.cs" />
+    <Compile Include="data\xml\XmlMkvInfoSummaryMapper.cs" />
     <Compile Include="FormApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +64,18 @@
     <Compile Include="FormValidator.Designer.cs">
       <DependentUpon>FormValidator.cs</DependentUpon>
     </Compile>
+    <Compile Include="merge\ChapterSelector.cs" />
+    <Compile Include="merge\extract\AttachmentExtractor.cs" />
+    <Compile Include="merge\extract\BaseMatroskaExtractor.cs" />
+    <Compile Include="merge\info\IMKVInfoLoaderStrategy.cs" />
+    <Compile Include="merge\info\MkvNixException.cs" />
+    <Compile Include="merge\info\MkvToolNixMkvInfoLoaderStrategy.cs" />
+    <Compile Include="merge\MergeJob.cs" />
+    <Compile Include="merge\MergeOptions.cs" />
+    <Compile Include="merge\MergePart.cs" />
+    <Compile Include="merge\MergeResult.cs" />
+    <Compile Include="merge\SegmentUtility.cs" />
+    <Compile Include="PathUtil.cs" />
     <Compile Include="PathUtility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,7 +121,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

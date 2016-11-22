@@ -5,10 +5,7 @@ namespace UnlinkMKV_GUI
 {
     public static class PathUtility
     {
-
-
         public static string ExceptionalPath = "";
-
 
         // Thanks!
         // http://csharptest.net/526/how-to-search-the-environments-path-for-an-exe-or-dll/
@@ -23,31 +20,31 @@ namespace UnlinkMKV_GUI
         public static string FindExePath(string exe)
         {
 
+            // Consulo vs Rider
+            // Which is better in the end? Well, I'm not really sure since it really will boil downt to whatever
+            // you think is the better tool.
+
             // If we're not on Windows, remove ".EXE"
-            int p = (int)Environment.OSVersion.Platform;
+            var p = (int)Environment.OSVersion.Platform;
             if ((p == 4) || (p == 6) || (p == 128))
             {
                 // Running on Unix, strip EXE
                 exe = exe.Replace(".exe", "");
             }
-      
 
             exe = Environment.ExpandEnvironmentVariables(exe);
-            if (!File.Exists(exe))
-            {
-                if (Path.GetDirectoryName(exe) == String.Empty)
-                {
-                    foreach (string test in (Environment.GetEnvironmentVariable("PATH") ?? "").Split(Path.PathSeparator))
-                    {
-                        string path = test.Trim();
-                        path = Path.Combine(path, exe);
-                        if (!String.IsNullOrEmpty(path) && File.Exists(path))
-                            return Path.GetFullPath(path);
-                    }
-                }
+            if (File.Exists(exe)) return Path.GetFullPath(exe);
+            if (Path.GetDirectoryName(exe) != String.Empty)
                 throw new FileNotFoundException(new FileNotFoundException().Message, exe);
+
+            foreach (var test in (Environment.GetEnvironmentVariable("PATH") ?? "").Split(Path.PathSeparator))
+            {
+                var path = test.Trim();
+                path = Path.Combine(path, exe);
+                if (!string.IsNullOrEmpty(path) && File.Exists(path))
+                    return Path.GetFullPath(path);
             }
-            return Path.GetFullPath(exe);
+            throw new FileNotFoundException(new FileNotFoundException().Message, exe);
         }
 
     }
