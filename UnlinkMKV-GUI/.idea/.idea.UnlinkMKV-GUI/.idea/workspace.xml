@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b65b422b-99e2-4910-a36a-11b595267311" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/SegmentTimecodeSelector.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/TimeCodeUtil.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/ui/TextBoxControlWriter.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/Program.cs" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/Program.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/UnlinkMKV-GUI.csproj" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/UnlinkMKV-GUI.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/data/ChapterAtom.cs" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/data/ChapterAtom.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/data/MKVInfo.cs" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/data/MKVInfo.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeResult.cs" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeResult.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/info/MkvToolNixMkvInfoLoaderStrategy.cs" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/info/MkvToolNixMkvInfoLoaderStrategy.cs" />
     </list>
     <ignored path="UnlinkMKV-GUI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MergeJob.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MergeJob.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-541">
-              <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+            <state relative-caret-position="275">
+              <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
               <folding>
                 <marker date="1480196667294" expanded="true" signature="6:232" ph="..." />
                 <marker date="1480196667294" expanded="true" signature="263:5465" ph="{...}" />
@@ -104,8 +95,8 @@
       <file leaf-file-name="MergeOptions.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeOptions.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding>
                 <marker date="1479445570858" expanded="true" signature="29:276" ph="{...}" />
                 <marker date="1479445570858" expanded="true" signature="61:274" ph="{...}" />
@@ -185,16 +176,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
-                <marker date="1480195876761" expanded="true" signature="6:106" ph="..." />
-                <marker date="1480195876761" expanded="true" signature="128:790" ph="{...}" />
-                <marker date="1480195876761" expanded="true" signature="186:788" ph="{...}" />
-                <marker date="1480195876761" expanded="true" signature="195:338" ph="/* TODO: Instead of running a WinForms application here... we can choose to just run some CLI against a hardcoded ... */" />
+                <marker date="1480196863561" expanded="true" signature="6:106" ph="..." />
+                <marker date="1480196863561" expanded="true" signature="128:346" ph="{...}" />
+                <marker date="1480196863561" expanded="true" signature="186:344" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -231,11 +221,11 @@
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/data/MKVInfo.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/SegmentTimecodeSelector.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/data/ChapterAtom.cs" />
-        <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/Program.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeOptions.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeResult.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/ui/ControlWriter.cs" />
+        <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/Program.cs" />
       </list>
     </option>
   </component>
@@ -386,12 +376,12 @@
       <workItem from="1479699362212" duration="2063000" />
       <workItem from="1479775591647" duration="2266000" />
       <workItem from="1479777882704" duration="1461000" />
-      <workItem from="1479779373143" duration="16968000" />
+      <workItem from="1479779373143" duration="17065000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54778000" />
+    <option name="totallyTimeSpent" value="54875000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -508,10 +498,9 @@
         <state relative-caret-position="459">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <marker date="1480195876761" expanded="true" signature="6:106" ph="..." />
-            <marker date="1480195876761" expanded="true" signature="128:790" ph="{...}" />
-            <marker date="1480195876761" expanded="true" signature="186:788" ph="{...}" />
-            <marker date="1480195876761" expanded="true" signature="195:338" ph="/* TODO: Instead of running a WinForms application here... we can choose to just run some CLI against a hardcoded ... */" />
+            <marker date="1480196863561" expanded="true" signature="6:106" ph="..." />
+            <marker date="1480196863561" expanded="true" signature="128:346" ph="{...}" />
+            <marker date="1480196863561" expanded="true" signature="186:344" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -592,10 +581,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1480195876761" expanded="true" signature="6:106" ph="..." />
-            <marker date="1480195876761" expanded="true" signature="128:790" ph="{...}" />
-            <marker date="1480195876761" expanded="true" signature="186:788" ph="{...}" />
-            <marker date="1480195876761" expanded="true" signature="195:338" ph="/* TODO: Instead of running a WinForms application here... we can choose to just run some CLI against a hardcoded ... */" />
+            <marker date="1480196863561" expanded="true" signature="6:106" ph="..." />
+            <marker date="1480196863561" expanded="true" signature="128:346" ph="{...}" />
+            <marker date="1480196863561" expanded="true" signature="186:344" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -856,22 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/data/MKVInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <marker date="1480192954188" expanded="true" signature="6:113" ph="..." />
-            <marker date="1480192954188" expanded="true" signature="143:2134" ph="{...}" />
-            <marker date="1480192954188" expanded="true" signature="150:260" ph="/// Represents some basic data around a MKV file that has been processed. ... " />
-            <marker date="1480192954188" expanded="true" signature="285:2132" ph="{...}" />
-            <marker date="1480192954188" expanded="true" signature="332:1706" ph="{...}" />
-            <marker date="1480192954188" expanded="true" signature="355:553" ph="/* Build up our data model to work with here... and then create a CLI utility that works everywhere. :) ... */" />
-            <marker date="1480192954188" expanded="true" signature="2023:2125" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/info/MkvToolNixMkvInfoLoaderStrategy.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="543">
@@ -903,30 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <marker date="1480195876761" expanded="true" signature="6:106" ph="..." />
-            <marker date="1480195876761" expanded="true" signature="128:790" ph="{...}" />
-            <marker date="1480195876761" expanded="true" signature="186:788" ph="{...}" />
-            <marker date="1480195876761" expanded="true" signature="195:338" ph="/* TODO: Instead of running a WinForms application here... we can choose to just run some CLI against a hardcoded ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeOptions.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <marker date="1479445570858" expanded="true" signature="29:276" ph="{...}" />
-            <marker date="1479445570858" expanded="true" signature="61:274" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeResult.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -934,6 +882,42 @@
           <folding>
             <marker date="1480196667288" expanded="true" signature="29:124" ph="{...}" />
             <marker date="1480196667288" expanded="true" signature="59:122" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
+          <folding>
+            <marker date="1480196667294" expanded="true" signature="6:232" ph="..." />
+            <marker date="1480196667294" expanded="true" signature="263:5465" ph="{...}" />
+            <marker date="1480196667294" expanded="true" signature="292:5463" ph="{...}" />
+            <marker date="1480196667294" expanded="true" signature="813:3093" ph="{...}" />
+            <marker date="1480196667294" expanded="true" signature="2258:2393" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
+            <marker date="1480196667294" expanded="true" signature="3129:3752" ph="{...}" />
+            <marker date="1480196667294" expanded="true" signature="3210:3454" ph="/* Removing chapters options helps with the following issues: ... */" />
+            <marker date="1480196667294" expanded="true" signature="3822:4071" ph="{...}" />
+            <marker date="1480196667294" expanded="true" signature="4131:4318" ph="{...}" />
+            <marker date="1480196667294" expanded="true" signature="4383:4721" ph="{...}" />
+            <marker date="1480196667294" expanded="true" signature="4778:5456" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/data/MKVInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <marker date="1480192954188" expanded="true" signature="6:113" ph="..." />
+            <marker date="1480192954188" expanded="true" signature="143:2134" ph="{...}" />
+            <marker date="1480192954188" expanded="true" signature="150:260" ph="/// Represents some basic data around a MKV file that has been processed. ... " />
+            <marker date="1480192954188" expanded="true" signature="285:2132" ph="{...}" />
+            <marker date="1480192954188" expanded="true" signature="332:1706" ph="{...}" />
+            <marker date="1480192954188" expanded="true" signature="355:553" ph="/* Build up our data model to work with here... and then create a CLI utility that works everywhere. :) ... */" />
+            <marker date="1480192954188" expanded="true" signature="2023:2125" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -951,22 +935,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs">
+    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeOptions.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-541">
-          <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding>
-            <marker date="1480196667294" expanded="true" signature="6:232" ph="..." />
-            <marker date="1480196667294" expanded="true" signature="263:5465" ph="{...}" />
-            <marker date="1480196667294" expanded="true" signature="292:5463" ph="{...}" />
-            <marker date="1480196667294" expanded="true" signature="813:3093" ph="{...}" />
-            <marker date="1480196667294" expanded="true" signature="2258:2393" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
-            <marker date="1480196667294" expanded="true" signature="3129:3752" ph="{...}" />
-            <marker date="1480196667294" expanded="true" signature="3210:3454" ph="/* Removing chapters options helps with the following issues: ... */" />
-            <marker date="1480196667294" expanded="true" signature="3822:4071" ph="{...}" />
-            <marker date="1480196667294" expanded="true" signature="4131:4318" ph="{...}" />
-            <marker date="1480196667294" expanded="true" signature="4383:4721" ph="{...}" />
-            <marker date="1480196667294" expanded="true" signature="4778:5456" ph="{...}" />
+            <marker date="1479445570858" expanded="true" signature="29:276" ph="{...}" />
+            <marker date="1479445570858" expanded="true" signature="61:274" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1480196863561" expanded="true" signature="6:106" ph="..." />
+            <marker date="1480196863561" expanded="true" signature="128:346" ph="{...}" />
+            <marker date="1480196863561" expanded="true" signature="186:344" ph="{...}" />
           </folding>
         </state>
       </provider>
