@@ -1,12 +1,9 @@
 ﻿namespace UnlinkMKV_GUI.merge
 {
-    public class MergeResult
+    public enum MergeResult
     {
-        public MergeResult(string resultFilePath)
-        {
-            ResultFilePath = resultFilePath;
-        }
-
-        public string ResultFilePath { get; private set; }
+        OK,
+        Error,
+        NothingToMerge,
     }
 }

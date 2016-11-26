@@ -1,4 +1,6 @@
 ﻿using System.Diagnostics;
+using System.Xml.Linq;
+using System.Xml.XPath;
 using UnlinkMKV_GUI.data;
 using UnlinkMKV_GUI.data.xml;
 
@@ -22,7 +24,20 @@ namespace UnlinkMKV_GUI.merge.info
             var mapper = new XmlMkvInfoSummaryMapper();
             var doc = mapper.DecodeStringIntoDocument(data);
 
-            return new MkvInfo(doc);
+            // Append some extract MediaInfo data that we might need... :(
+            var mediaInfoProc = new Process
+            {
+                StartInfo =
+                    new ProcessStartInfo("mediainfo", $"--Inform=\"Video;%Duration/String3%\" {file}") {RedirectStandardOutput = true, UseShellExecute = false}
+            };
+
+            mediaInfoProc.Start();
+            mediaInfoProc.WaitForExit();
+            var mediaInfoStr = mediaInfoProc.StandardOutput.ReadToEnd();
+
+            // mediainfo > file > duration... weird format
+            var mkvInfo = new MkvInfo(doc) {Duration = TimeCodeUtil.TimeCodeToTimespan(mediaInfoStr)};
+            return mkvInfo;
         }
     }
 }

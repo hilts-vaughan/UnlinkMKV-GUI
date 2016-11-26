@@ -52,15 +52,11 @@ namespace UnlinkMKV_GUI.data
         public List<MkvAttachment> Attachments { get; }
         public MkvSegmentUid SegmentUid { get; }
         public Chapter Chapters { get;  }
+        public TimeSpan Duration { get; set; }
 
         public bool IsFileLinked()
         {
-            var isLinked = false;
-            foreach (var edition in Chapters.Editions)
-            {
-                edition.Chapters.ForEach((x => isLinked |= x.IsLinked()));
-            }
-            return isLinked;
+            return Chapters.Editions.Any(x => x.Chapters.Any(y => y.IsLinked()));
         }
 
     }

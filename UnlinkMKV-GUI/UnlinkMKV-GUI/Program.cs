@@ -13,7 +13,7 @@ public class Program
 	    // path if we must do so
 
 	    var myDisk =
-	        "/mnt/media/Downloads/complete/[Coalgirls]_Nisemonogatari_(1920x1080_Blu-ray_FLAC)/[Coalgirls]_Nisemonogatari_02_(1920x1080_Blu-ray_FLAC)_[F338F8D9].mkv";
+	        "/mnt/media/AnimeToBeProcessed/[Coalgirls]_Serial_Experiments_Lain_(1520x1080_Blu-Ray_FLAC)/[Coalgirls]_Serial_Experiments_Lain_01_(1520x1080_Blu-Ray_FLAC)_[573CDDD6].mkv";
 	    var x = new MergeJob(new MergeOptions(), myDisk);
 
 	    x.PerformMerge();

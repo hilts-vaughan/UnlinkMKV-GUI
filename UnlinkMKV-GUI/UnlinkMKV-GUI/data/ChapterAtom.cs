@@ -1,8 +1,9 @@
-﻿using System.Xml.Linq;
+﻿using System;
+using System.Xml.Linq;
 
 namespace UnlinkMKV_GUI.data
 {
-    public class ChapterAtom
+    public class ChapterAtom : IEquatable<ChapterAtom>
     {
         public ChapterAtom(XContainer chapterNode)
         {
@@ -19,7 +20,7 @@ namespace UnlinkMKV_GUI.data
         }
 
         public string ChapterTimecodeEnd { get; set; }
-        public string ChapterTimecodeStart { get; }
+        public string ChapterTimecodeStart { get; set; }
         public string ChapterName { get; }
         public string ChapterLanguage { get; }
 
@@ -37,5 +38,10 @@ namespace UnlinkMKV_GUI.data
             return ReferencedSegmentUid != null;
         }
 
+
+        public bool Equals(ChapterAtom other)
+        {
+            return other?.ChapterName == this.ChapterName;
+        }
     }
 }

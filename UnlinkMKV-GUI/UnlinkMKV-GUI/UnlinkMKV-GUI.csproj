@@ -74,11 +74,14 @@
     <Compile Include="merge\MergeOptions.cs" />
     <Compile Include="merge\MergePart.cs" />
     <Compile Include="merge\MergeResult.cs" />
+    <Compile Include="merge\SegmentTimecodeSelector.cs" />
     <Compile Include="merge\SegmentUtility.cs" />
+    <Compile Include="merge\TimeCodeUtil.cs" />
     <Compile Include="PathUtil.cs" />
     <Compile Include="PathUtility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ui\TextBoxControlWriter.cs" />
     <Compile Include="Valdiators\IValidatorTask.cs" />
     <Compile Include="Valdiators\Validators.cs" />
     <Compile Include="ValidationStatusControl.cs">

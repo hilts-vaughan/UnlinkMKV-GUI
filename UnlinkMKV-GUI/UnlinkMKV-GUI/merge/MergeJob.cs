@@ -15,62 +15,75 @@ namespace UnlinkMKV_GUI.merge
     {
         private readonly MergeOptions _options;
         private readonly string _filename;
-        private List<Tuple<string, int>> _timecodes = new List<Tuple<string, int>>();
+        private readonly string _destination;
+        private List<string> _timecodes = new List<string>();
         private List<string> _segMapping = new List<string>();
 
-        public MergeJob(MergeOptions options, string filename)
+        public MergeJob(MergeOptions options, string filename, string destination)
         {
             _options = options;
             _filename = filename;
+            _destination = destination;
         }
 
-        public void PerformMerge()
+        public MergeResult PerformMerge()
         {
             Console.WriteLine("Starting the processing of the file: {0}", _filename);
-
 
             var loader = new MkvToolNixMkvInfoLoaderStrategy();
             var info = loader.FetchMkvInfo(_filename);
 
             if (info.IsFileLinked())
             {
-                Console.WriteLine("File was deteremined to be linked so will begin process...");
-
                 var workingDir = PathUtil.GetTemporaryDirectory();
                 Environment.CurrentDirectory = workingDir;
 
-                Console.WriteLine($"Your working directory will be: {workingDir}");
+                try
+                {
+                    Console.WriteLine("File was deteremined to be linked so will begin process...");
 
-                // Step 1: Capture the segments that are the same in the directory
-                var segments = SegmentUtility.GetMergePartsForFilename(_filename, info);
+                    Console.WriteLine($"Your working directory will be: {workingDir}");
 
-                // Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too
-                segments.ForEach(ExtractAttachments);
+                    // Step 1: Capture the segments that are the same in the directory
+                    var segments = SegmentUtility.GetMergePartsForFilename(_filename, info);
 
-                // TODO: Later, the command line arguments can be built...
+                    // Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too
+                    segments.ForEach(ExtractAttachments);
 
-                // Step 3: Create the split for the segments; get the splitting ready
-                SplitTimecode(info, segments);
+                    // TODO: Later, the command line arguments can be built...
 
-                // Step 4: Extract the splits
-                ExtractSplits(_filename);
+                    var selector = new SegmentTimecodeSelector();
+                    var dto = selector.GetTimecodeAndSegments(info, segments, false);
+                    this._segMapping = dto.SegmentMap;
+                    this._timecodes = dto.Timecodes;
 
-                // Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully
-                // built "order"
-                RebuildFile();
+                    // Step 4: Extract the splits
+                    ExtractSplits(_filename);
 
-                Console.WriteLine("Job complete!");
+                    // Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully
+                    // built "order"
+                    RebuildFile();
+
+                    File.Move(Path.Combine(workingDir, "output.mkv"), _destination);
+                    Console.WriteLine("Job complete!");
+                }
+                catch (Exception e)
+                {
+                    throw;
+                }
+                finally
+                {
+                    // Clean up after ones self
+                    Directory.Delete(workingDir, true);
+                }
             }
             else
             {
                 Console.WriteLine("File was determined to not be linked. Ignoring.");
+                return MergeResult.NothingToMerge;
             }
 
-            // TODO: Doing things here async is cool... thanks C# :)
-            // await Task.Delay(1000);
-
-             // TODO: Replace me the the proper steps
-            // return new MergeResult("/mnt/media/Processed/inbox.mkv");
+            return MergeResult.OK;
         }
 
         private void RebuildFile()
@@ -89,71 +102,13 @@ namespace UnlinkMKV_GUI.merge
             process.WaitForExit();
         }
 
-        private void SplitTimecode(MkvInfo info, IList<MergePart> segments)
-        {
-            var prev = "00:00:00.000000000";
-
-            // This is the index that would have to be "added" onto... we'd always have at least one split
-            var splitIndex = 1;
-
-            var englishChapters = info.Chapters.Editions[0].Chapters.Where(x => x.ChapterLanguage == "eng").ToList();
-
-            // Should probably sort these chapters by timecode
-            englishChapters.Sort(TimecodeComparator);
-
-            foreach (var chapterAtom in englishChapters)
-            {
-               // A split is required if you're linked; otherwise you can forget it
-                if (chapterAtom.IsLinked())
-                {
-                    if (prev != "00:00:00.000000000")
-                    {
-                        Console.WriteLine("segment to link!");
-                        this._timecodes.Add(new Tuple<string, int>(prev, splitIndex));
-                        splitIndex++;
-                    }
-
-
-                    var segment = segments.First(x => x.Info.SegmentUid.IsSame(chapterAtom.ReferencedSegmentUid));
-                    this._segMapping.Add(segment.Filename);
-                }
-                else
-                {
-                    prev = chapterAtom.ChapterTimecodeEnd;
-                    Console.WriteLine("split - original");
-
-
-                    // We check the last string to handle the case where the user might have decided
-                    // to place chapters next to each other, even if they are adjacenet in the split
-                    var filename = $"splits/split-{splitIndex:D3}.mkv"; // for 3 digit splits
-                    var lastFilename = this._segMapping.LastOrDefault();
-
-                    if (filename != lastFilename)
-                    {
-                        this._segMapping.Add(filename);
-                    }
-
-                }
-            }
-        }
-
         private int TimecodeComparator(ChapterAtom x, ChapterAtom y)
         {
-            var firstStart = TimeCodeToTimespan(x.ChapterTimecodeStart);
-            var secondStart = TimeCodeToTimespan(y.ChapterTimecodeStart);
+            var firstStart = TimeCodeUtil.TimeCodeToTimespan(x.ChapterTimecodeStart);
+            var secondStart = TimeCodeUtil.TimeCodeToTimespan(y.ChapterTimecodeStart);
 
             return firstStart.CompareTo(secondStart);
 
-        }
-
-        private TimeSpan TimeCodeToTimespan(string timeCode)
-        {
-            var splits = timeCode.Split(':');
-            var hour = splits[0];
-            var minute = splits[1];
-            var second = splits[2].Split('.')[0];
-
-            return new TimeSpan(0, int.Parse(hour), int.Parse(minute), int.Parse(second));
         }
 
         private void ExtractAttachments(MergePart segment)
@@ -177,12 +132,11 @@ namespace UnlinkMKV_GUI.merge
         private void ExtractSplits(string baseFilename)
         {
             var oldPath = CreateAndChangeTo("splits");
-            var timecodes = this._timecodes.Select(x => x.Item1);
 
 
-            if (timecodes.Any())
+            if (this._timecodes.Any())
             {
-                var joined = string.Join(",", timecodes);
+                var joined = string.Join(",", this._timecodes);
                 Console.WriteLine(joined);
                 var p = Process.Start("mkvmerge",
                     $"--no-chapters -o split-%03d.mkv {this._filename} --split timecodes:{joined}");
