@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 # UnlinkMKV - Undo segment linking in MKV files
 # Garret Noling <garret@werockjustbecause.com> 2013-2015
+# Modifications by Vaughan Hilts for Win32 Compatability
 
 require 5.010;
 use strict;
@@ -344,7 +345,7 @@ use File::Spec::Functions;
 		my $in = 0;
 		my ($N, $T, $D, $U);
 		TRACE "FILE $file";
-		for(split /\n/, $self->sys($self->{opt}->{mkvinfo}, $file)) {
+		for(split /\n/, $self->sys($self->{opt}->{mkvinfo}, $file, '--no-gui')) {
 		    chomp;
 		    if ($_ =~ /^\| \+ Attached/) {
 			$in = 1;
@@ -425,7 +426,7 @@ use File::Spec::Functions;
 		    my $in  = 0;
 		    my $sub = 0;
 		    my ($N, $T, $D, $U);
-		    for (split /\n/, $self->sys($self->{opt}->{mkvinfo}, $part)) {
+		    for (split /\n/, $self->sys($self->{opt}->{mkvinfo}, $part, '--no-gui')) {
 			chomp;
 			if ($_ =~ /^\| \+ A track/) {
 			    $in = 1;
@@ -527,7 +528,7 @@ use File::Spec::Functions;
 		my $in  = 0;
 		my $sub = 0;
 		my ($N, $T, $D, $U);
-		for (split /\n/, $self->sys($self->{opt}->{mkvinfo}, catfile($self->{encodesdir}, basename($item)))) {
+		for (split /\n/, $self->sys($self->{opt}->{mkvinfo}, '--no-gui', catfile($self->{encodesdir}, basename($item)))) {
 		    chomp;
 		    if ($_ =~ /^\| \+ A track/) {
 			$in = 1;
@@ -559,7 +560,9 @@ use File::Spec::Functions;
 	    INFO "moving built file to final destination";
 	    more();
 	    make_path($self->{opt}->{outdir}, { verbose => 0 });
-	    move(catfile($self->{encodesdir}, basename($item)), $self->{opt}->{outdir});
+	    my $first = catfile($self->{encodesdir}, basename($item));
+		my $second = $self->{opt}->{outdir};
+		move($first, $second);		
 	    less();
 	}
 	$self->mktmp();
@@ -731,7 +734,7 @@ use File::Spec::Functions;
 	my $file = shift;
 	my $id  = '';
 	my $dur = '';
-	for(split /\n/, $self->sys($self->{opt}->{mkvinfo}, $file)) {
+	for(split /\n/, $self->sys($self->{opt}->{mkvinfo}, $file, '--no-gui')) {
 	    chomp;
 	    if ($_ =~ /Segment[ \-]UID:/) {
 		$_ =~ /Segment[ \-]UID:([a-zA-Z0-9\s]+)$/;
