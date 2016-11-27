@@ -22,6 +22,7 @@ namespace UnlinkMKV_GUI.Valdiators
                 PathUtility.FindExePath("mkvextract.exe");
                 PathUtility.FindExePath("mkvinfo.exe");
                 PathUtility.FindExePath("mkvmerge.exe");
+                PathUtility.FindExePath("mediainfo.exe");
             }
             catch (FileNotFoundException exception)
             {
@@ -113,6 +114,7 @@ namespace UnlinkMKV_GUI.Valdiators
         }
     }
 
+
     public class PerlExistsValidatorTask : IValidatorTask
     {
         public string GetStatusText()
@@ -125,7 +127,6 @@ namespace UnlinkMKV_GUI.Valdiators
             // Check for the path's to the tools we required
             try
             {
-
 
                 PathUtility.FindExePath("perl.exe");
             }

@@ -290,7 +290,7 @@ namespace UnlinkMKV_GUI {
             var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write);
             using (var writer = new StreamWriter(fs)) {
                 foreach (var entry in _values) {
-                    string lineEntry = String.Format("{0} = {1}", entry.Key, entry.Value);
+                    string lineEntry = string.Format("{0} = {1}", entry.Key, entry.Value);
                     writer.WriteLine(lineEntry);
                 }
             }

@@ -18,9 +18,9 @@ namespace UnlinkMKV_GUI.merge.info
             }
 
             proc.Start();
+            var data = proc.StandardOutput.ReadToEnd();
             proc.WaitForExit();
 
-            var data = proc.StandardOutput.ReadToEnd();
             var mapper = new XmlMkvInfoSummaryMapper();
             var doc = mapper.DecodeStringIntoDocument(data);
 
@@ -32,8 +32,8 @@ namespace UnlinkMKV_GUI.merge.info
             };
 
             mediaInfoProc.Start();
-            mediaInfoProc.WaitForExit();
             var mediaInfoStr = mediaInfoProc.StandardOutput.ReadToEnd();
+            mediaInfoProc.WaitForExit();
 
             // mediainfo > file > duration... weird format
             var mkvInfo = new MkvInfo(doc) {Duration = TimeCodeUtil.TimeCodeToTimespan(mediaInfoStr)};
