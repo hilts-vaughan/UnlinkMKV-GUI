@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b65b422b-99e2-4910-a36a-11b595267311" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/IMkvJobMerger.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/legacy/PerlJob.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/FormApplication.cs" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/FormApplication.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/UnlinkMKV-GUI.csproj" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/UnlinkMKV-GUI.csproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/ui/TextBoxControlWriter.cs" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/ui/TextBoxControlWriter.cs" />
     </list>
     <ignored path="UnlinkMKV-GUI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,22 +94,23 @@
       <file leaf-file-name="MergeJob.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state relative-caret-position="257">
+              <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
               <folding>
-                <marker date="1480205568521" expanded="true" signature="6:232" ph="..." />
-                <marker date="1480205568521" expanded="true" signature="263:5724" ph="{...}" />
-                <marker date="1480205568521" expanded="true" signature="308:5722" ph="{...}" />
-                <marker date="1480205568521" expanded="true" signature="643:695" ph="{...}" />
-                <marker date="1480205568521" expanded="true" signature="800:1013" ph="{...}" />
-                <marker date="1480205568521" expanded="true" signature="1056:3347" ph="{...}" />
-                <marker date="1480205568521" expanded="true" signature="2477:2612" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
-                <marker date="1480205568521" expanded="true" signature="3383:4011" ph="{...}" />
-                <marker date="1480205568521" expanded="true" signature="3464:3708" ph="/* Removing chapters options helps with the following issues: ... */" />
-                <marker date="1480205568521" expanded="true" signature="4081:4330" ph="{...}" />
-                <marker date="1480205568521" expanded="true" signature="4390:4577" ph="{...}" />
-                <marker date="1480205568521" expanded="true" signature="4642:4980" ph="{...}" />
-                <marker date="1480205568521" expanded="true" signature="5037:5715" ph="{...}" />
+                <marker date="1480269582442" expanded="true" signature="6:232" ph="..." />
+                <marker date="1480269582442" expanded="true" signature="263:5727" ph="{...}" />
+                <marker date="1480269582442" expanded="true" signature="308:5725" ph="{...}" />
+                <marker date="1480269582442" expanded="true" signature="643:695" ph="{...}" />
+                <marker date="1480269582442" expanded="true" signature="800:1013" ph="{...}" />
+                <marker date="1480269582442" expanded="true" signature="1056:3350" ph="{...}" />
+                <marker date="1480269582442" expanded="true" signature="1938:2100" ph="/* Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too ... */" />
+                <marker date="1480269582442" expanded="true" signature="2480:2615" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
+                <marker date="1480269582442" expanded="true" signature="3386:4014" ph="{...}" />
+                <marker date="1480269582442" expanded="true" signature="3467:3711" ph="/* Removing chapters options helps with the following issues: ... */" />
+                <marker date="1480269582442" expanded="true" signature="4084:4333" ph="{...}" />
+                <marker date="1480269582442" expanded="true" signature="4393:4580" ph="{...}" />
+                <marker date="1480269582442" expanded="true" signature="4645:4983" ph="{...}" />
+                <marker date="1480269582442" expanded="true" signature="5040:5718" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -292,8 +287,8 @@
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/legacy/PerlJob.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/FormApplication.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/ui/TextBoxControlWriter.cs" />
-        <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/SegmentTimecodeSelector.cs" />
+        <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs" />
       </list>
     </option>
   </component>
@@ -463,12 +458,12 @@
       <workItem from="1479775591647" duration="2266000" />
       <workItem from="1479777882704" duration="1461000" />
       <workItem from="1479779373143" duration="18704000" />
-      <workItem from="1480198540685" duration="6529000" />
+      <workItem from="1480198540685" duration="6581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63043000" />
+    <option name="totallyTimeSpent" value="63095000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -568,19 +563,20 @@
         <state relative-caret-position="1207">
           <caret line="71" column="111" selection-start-line="71" selection-start-column="111" selection-end-line="71" selection-end-column="111" />
           <folding>
-            <marker date="1480205568521" expanded="true" signature="6:232" ph="..." />
-            <marker date="1480205568521" expanded="true" signature="263:5724" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="308:5722" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="643:695" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="800:1013" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="1056:3347" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="2477:2612" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
-            <marker date="1480205568521" expanded="true" signature="3383:4011" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="3464:3708" ph="/* Removing chapters options helps with the following issues: ... */" />
-            <marker date="1480205568521" expanded="true" signature="4081:4330" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="4390:4577" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="4642:4980" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="5037:5715" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="6:232" ph="..." />
+            <marker date="1480269582442" expanded="true" signature="263:5727" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="308:5725" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="643:695" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="800:1013" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="1056:3350" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="1938:2100" ph="/* Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too ... */" />
+            <marker date="1480269582442" expanded="true" signature="2480:2615" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
+            <marker date="1480269582442" expanded="true" signature="3386:4014" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="3467:3711" ph="/* Removing chapters options helps with the following issues: ... */" />
+            <marker date="1480269582442" expanded="true" signature="4084:4333" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="4393:4580" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="4645:4983" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="5040:5718" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1014,22 +1010,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="257">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
           <folding>
-            <marker date="1480205568521" expanded="true" signature="6:232" ph="..." />
-            <marker date="1480205568521" expanded="true" signature="263:5724" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="308:5722" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="643:695" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="800:1013" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="1056:3347" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="2477:2612" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
-            <marker date="1480205568521" expanded="true" signature="3383:4011" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="3464:3708" ph="/* Removing chapters options helps with the following issues: ... */" />
-            <marker date="1480205568521" expanded="true" signature="4081:4330" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="4390:4577" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="4642:4980" ph="{...}" />
-            <marker date="1480205568521" expanded="true" signature="5037:5715" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="6:232" ph="..." />
+            <marker date="1480269582442" expanded="true" signature="263:5727" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="308:5725" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="643:695" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="800:1013" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="1056:3350" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="1938:2100" ph="/* Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too ... */" />
+            <marker date="1480269582442" expanded="true" signature="2480:2615" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
+            <marker date="1480269582442" expanded="true" signature="3386:4014" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="3467:3711" ph="/* Removing chapters options helps with the following issues: ... */" />
+            <marker date="1480269582442" expanded="true" signature="4084:4333" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="4393:4580" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="4645:4983" ph="{...}" />
+            <marker date="1480269582442" expanded="true" signature="5040:5718" ph="{...}" />
           </folding>
         </state>
       </provider>

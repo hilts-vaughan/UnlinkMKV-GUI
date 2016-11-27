@@ -57,7 +57,7 @@ namespace UnlinkMKV_GUI.merge
                     var segments = SegmentUtility.GetMergePartsForFilename(_filename, info);
 
                     // Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too
-                    segments.ForEach(ExtractAttachments);
+                    // segments.ForEach(ExtractAttachments);
 
                     var selector = new SegmentTimecodeSelector();
                     var dto = selector.GetTimecodeAndSegments(info, segments, false);
