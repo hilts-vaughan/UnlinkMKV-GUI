@@ -17,6 +17,7 @@ The following are required on every platform:
 * Perl (required)
 * FFmpeg (optional, encoding)
 * MKVToolnix (required)
+* Mediainfo (Native Backend)
 * Mono or .NET Framework
 
 Following the below directions for getting the depedencies you might need:
@@ -28,6 +29,8 @@ Following the below directions for getting the depedencies you might need:
 **MKVToolnix**: Install from here and use the installer https://www.bunkus.org/videotools/mkvtoolnix/downloads.html (or you can download the ZIP and add it to your PATH, if you prefer). Copy and note the install path you are putting down
 
 **FFmpeg**: This is optional, only required if you want to encode but you can find many guides on the internet to setting it up, such as this: http://jonhall.info/how_to/setup_and_use_ffmpeg_on_windows
+
+**Mediainfo**: This is optional as well but is needed if you want to use "Native Mode" You need to make sure you have the command line utilities available to use. For Windows, you can download those here: https://mediaarea.net/en/MediaInfo/Download/Windows
 
 **.NET**: You should already have this.
 
@@ -62,6 +65,8 @@ If you're running on Linux, you will need to look up how to get the tools above 
 
 ## Every Operating System
 
+Using Perl backend:
+
 You will probably need `Log::Log4perl` and `XML::LibXML` for your Perl installation. You can do this step just in case if you're not sure if it's installed. 
 
 1. Open a terminal or command prompt on your operating system
@@ -70,6 +75,10 @@ You will probably need `Log::Log4perl` and `XML::LibXML` for your Perl installat
 4. The CPAN manager should install the logging module, and the XML module, you should be able to exit the terminal now.
 
 If you are using Mono, the first run always takes a little bit (about a minute). Please be patient.
+
+Native Backend:
+
+There is no need for Perl. Just note that the native backend is less compatible and more compatible in some cases. If you have troublesome files, you may want to try both.
 
 # Using the application
 
