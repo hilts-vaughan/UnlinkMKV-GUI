@@ -1,5 +1,5 @@
 **You can download up at the top under 'releases'!**
-** Please Note: This application only works properly if your system locale is set to English**
+
 
 # What is it?
 
@@ -9,6 +9,9 @@ Provides a GUI interface for the UnlinkMKV project by Garret Noling. Modified to
 UnlinkMKV: https://github.com/gnoling/UnlinkMKV
 
 Written with C#, runs on Mono for many different operating systems. 
+
+
+**Please keep in mind the application can be run into two modes. If you want to use the Perl "UnlinkMKV" backend, then do NOT tick off "Native Mode" on the GUI. If you are running into problems with that mode or some of the outputs it produces, try ticking "Native Mode" and running the process again. In some cases, this will resolve some of the issues.**
 
 # Dependencies
 
@@ -94,6 +97,8 @@ If you get "unlinked finished" immediately and no output, make sure you have ins
 # I found a bug/the application doesn't Unlink my MKV's properly. Help?
 
 You can post the issue with a verbose log on the issue tracker. Tick the "verbose output" checkbox in the options when doing the run before posting a log on the issue tracked. If the issue is part of the UnlinkMKV core, it will be addressed there. Otherwise, it will be addressed here. 
+
+If the issue is with a particular release or set of files, please open an issue for that particular for that release. 
 
 # For developers
 
