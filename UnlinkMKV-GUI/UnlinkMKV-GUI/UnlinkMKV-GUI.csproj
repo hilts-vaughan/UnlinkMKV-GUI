@@ -64,6 +64,8 @@
     <Compile Include="FormValidator.Designer.cs">
       <DependentUpon>FormValidator.cs</DependentUpon>
     </Compile>
+    <Compile Include="IMkvJobMerger.cs" />
+    <Compile Include="legacy\PerlJob.cs" />
     <Compile Include="merge\ChapterSelector.cs" />
     <Compile Include="merge\extract\AttachmentExtractor.cs" />
     <Compile Include="merge\extract\BaseMatroskaExtractor.cs" />

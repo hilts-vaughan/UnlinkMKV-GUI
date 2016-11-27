@@ -11,24 +11,34 @@ using UnlinkMKV_GUI.merge.info;
 namespace UnlinkMKV_GUI.merge
 {
 
-    public class MergeJob
+    public class MergeJob : IMkvJobMerger
     {
         private readonly MergeOptions _options;
-        private readonly string _filename;
-        private readonly string _destination;
+        private string _filename;
+        private string _destination;
+        private string _baseFilename;
         private List<string> _timecodes = new List<string>();
         private List<string> _segMapping = new List<string>();
 
-        public MergeJob(MergeOptions options, string filename, string destination)
+        public MergeJob(MergeOptions options)
         {
             _options = options;
-            _filename = filename;
-            _destination = destination;
+        }
+
+        public async Task<MergeResult> ExecuteJob(TextWriter logger, string source, string destination)
+        {
+            this._filename = source;
+            this._destination = destination;
+            this._timecodes.Clear();
+            this._segMapping.Clear();
+
+            return PerformMerge();
         }
 
         public MergeResult PerformMerge()
         {
             Console.WriteLine("Starting the processing of the file: {0}", _filename);
+            _baseFilename = Path.GetFileName(_filename);
 
             var loader = new MkvToolNixMkvInfoLoaderStrategy();
             var info = loader.FetchMkvInfo(_filename);
@@ -41,7 +51,6 @@ namespace UnlinkMKV_GUI.merge
                 try
                 {
                     Console.WriteLine("File was deteremined to be linked so will begin process...");
-
                     Console.WriteLine($"Your working directory will be: {workingDir}");
 
                     // Step 1: Capture the segments that are the same in the directory
@@ -49,8 +58,6 @@ namespace UnlinkMKV_GUI.merge
 
                     // Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too
                     segments.ForEach(ExtractAttachments);
-
-                    // TODO: Later, the command line arguments can be built...
 
                     var selector = new SegmentTimecodeSelector();
                     var dto = selector.GetTimecodeAndSegments(info, segments, false);
@@ -64,7 +71,7 @@ namespace UnlinkMKV_GUI.merge
                     // built "order"
                     RebuildFile();
 
-                    File.Move(Path.Combine(workingDir, "output.mkv"), _destination);
+                    File.Move(Path.Combine(workingDir, $"{_baseFilename}"), Path.Combine(_destination, _baseFilename));
                     Console.WriteLine("Job complete!");
                 }
                 catch (Exception e)
@@ -95,7 +102,7 @@ namespace UnlinkMKV_GUI.merge
             //  2. Artifacted chapters are rarely useful when played back in something like Plex
             var parts = string.Join(" --no-chapters +", this._segMapping);
 
-            proc.Arguments = $"--no-chapters -o output.mkv {parts}";
+            proc.Arguments = $"--no-chapters -o {_baseFilename} {parts}";
             var process = new Process();
             process.StartInfo = proc;
             process.Start();

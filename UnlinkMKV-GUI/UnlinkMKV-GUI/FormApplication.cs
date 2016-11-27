@@ -6,6 +6,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using UnlinkMKV_GUI.legacy;
+using UnlinkMKV_GUI.merge;
+using UnlinkMKV_GUI.ui;
 
 namespace UnlinkMKV_GUI {
     public partial class FormApplication : Form {
@@ -56,6 +59,7 @@ namespace UnlinkMKV_GUI {
             optionList.Add(Tuple.Create("Ignore missing segments", "--ignoremissingsegments"));
 
             optionList.Add(Tuple.Create("Verbose output", "--ll TRACE"));
+            optionList.Add(Tuple.Create("Native Backend", "--native"));
 
             foreach (var option in optionList) {
                 var checkBox = new CheckBox();
@@ -106,6 +110,11 @@ namespace UnlinkMKV_GUI {
             return buffer;
         }
 
+        private bool ShouldUseNativeBackend()
+        {
+            return GetCommandLineArguments().IndexOf("native", StringComparison.Ordinal) > -1;
+        }
+
         private void buttonAbort_Click(object sender, EventArgs e) {
             // Abort the thread immediately
             _taskThread.Abort();
@@ -114,8 +123,7 @@ namespace UnlinkMKV_GUI {
             var processToKill = GetUtilityPrograms();
             processToKill.ForEach(x => Process.GetProcessesByName(x).ToList().ForEach(process => process.Kill()));
 
-            if (_currProcess != null)
-                _currProcess.Kill();
+            _currProcess?.Kill();
 
             buttonExecute.Enabled = true;
             buttonAbort.Enabled = false;
@@ -123,7 +131,7 @@ namespace UnlinkMKV_GUI {
         }
 
         private List<String> GetUtilityPrograms() {
-            return new List<String>() { "mkvmerge", "mkvinfo", "mkvextract", "ffmpeg" };
+            return new List<String>() { "mkvmerge", "mkvinfo", "mkvextract", "ffmpeg", "mediainfo" };
         }
 
         private void buttonExecute_Click(object sender, EventArgs e) {
@@ -152,98 +160,37 @@ namespace UnlinkMKV_GUI {
             return ready;
         }
 
-        private string CleanEscape(string inputString) {
-            return Regex.Replace(inputString, @"\e\[(\d+;)*(\d+)?[ABCDHJKfmsu]", "");
-        }
 
-        private void PerformJob() {
+        private async void PerformJob()
+        {
+            var isNative = ShouldUseNativeBackend();
+
+            // Clear log
             textLog.Clear();
 
             // Create directory ahead of time
             Directory.CreateDirectory(textOutput.Text);
 
-            // Setup our config
-            var configPath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "unlinkmkv.ini");
-            var config = new Config(configPath);
+            IMkvJobMerger mergeStrategy;
+            var logger = new TextBoxControlWriter(this, textLog);
 
-            var merge = PathUtility.FindExePath("mkvmerge.exe");
-            var info = PathUtility.FindExePath("mkvinfo.exe");
-            var extract = PathUtility.FindExePath("mkvextract.exe");
-            var ffmpeg = "";
-
-
-            try
+            if (isNative)
             {
-               ffmpeg = PathUtility.FindExePath("ffmpeg.exe");
+                mergeStrategy = new MergeJob(new MergeOptions());
+                Console.SetOut(logger);
             }
-            catch(Exception e)
+            else
             {
-                // Do nothing
+                mergeStrategy = new PerlJob(GetCommandLineArguments());
             }
 
-            config.OutputPath = textOutput.Text;
-            config.SetRequiredPaths(ffmpeg, extract, info, merge);
-            config.Persist(configPath);
+            var sourcePath = textInput.Text;
+            var files = Directory.GetFiles(sourcePath);
 
-            // TODO: Support the rest of the parameters as they become reasonable to support
-
-            var files = Directory.GetFiles(textInput.Text);
-
-            var perlParams = GetCommandLineArguments();
-            var perlPath = PathUtility.FindExePath("perl.exe");
-            var outDirectory = "--outdir \"" + textOutput.Text + "\"";
-            var perlScript = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "winport.pl");
-
-
-            // For each file, we need to run the Perl script once. It doesn't support batch mode
-            foreach (var file in files) {
-
-                // Generate a Perl job
-                var quotedFile = "\"" + file + "\"";
-                var argument = "\"" + perlScript + "\" " + perlParams + " " + outDirectory + " " + quotedFile;
-
-                // PathUtility.ExceptionalPath
-                var startInfo = new ProcessStartInfo
-                {
-                    FileName = perlPath,
-                    Arguments = argument,
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true,
-                    CreateNoWindow = true
-                };
-
-                string x = perlPath + " " + argument;
-                ExecuteSecure(() => textLog.AppendText(CleanEscape(x) + Environment.NewLine));
-
-                // Add the path if required to the Perl executing path
-                if (!string.IsNullOrEmpty(PathUtility.ExceptionalPath))
-                {
-                    startInfo.EnvironmentVariables["PATH"] = PathUtility.ExceptionalPath;
-                }
-
-                var perlJob = new Process()
-                {
-                    StartInfo = startInfo
-                };
-
-
-                perlJob.ErrorDataReceived += (s, e) => Console.WriteLine(e.Data);
-
-                perlJob.Start();
-
-                _currProcess = perlJob;
-
-                while (!perlJob.StandardOutput.EndOfStream) {
-                    string line = perlJob.StandardOutput.ReadLine();
-                    ExecuteSecure(() => textLog.AppendText(CleanEscape(line) + Environment.NewLine));
-                }
-
-                _currProcess.WaitForExit();
-
-                _currProcess = null;
+            foreach (var file in files)
+            {
+                var result = mergeStrategy.ExecuteJob(logger, file, textOutput.Text);
             }
-
 
             // End the job
             ExecuteSecure(() => MessageBox.Show("The unlinking is complete!", "Complete", MessageBoxButtons.OK, MessageBoxIcon.Information));
