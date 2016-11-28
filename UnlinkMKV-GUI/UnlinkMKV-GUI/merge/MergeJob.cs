@@ -95,12 +95,19 @@ namespace UnlinkMKV_GUI.merge
 
         private void RebuildFile()
         {
+
             var proc = new ProcessStartInfo("mkvmerge");
+
+            var y = new List<string>();
+            foreach (var s in _segMapping)
+            {
+                y.Add(string.Format("\"{0}\"", s));
+            }
 
             // Removing chapters options helps with the following issues:
             //  1. Ordered flags will get left behind sometimes, which is a nuissance
             //  2. Artifacted chapters are rarely useful when played back in something like Plex
-            var parts = string.Join(" --no-chapters +", this._segMapping);
+            var parts = string.Join(" --no-chapters +", y);
 
             proc.Arguments = $"--no-chapters -o {_baseFilename} {parts}";
             var process = new Process();
