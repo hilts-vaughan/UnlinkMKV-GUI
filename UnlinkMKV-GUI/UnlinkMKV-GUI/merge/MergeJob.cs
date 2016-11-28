@@ -146,7 +146,7 @@ namespace UnlinkMKV_GUI.merge
                 var joined = string.Join(",", this._timecodes);
                 Console.WriteLine(joined);
                 var p = Process.Start("mkvmerge",
-                    $"--no-chapters -o split-%03d.mkv {this._filename} --split timecodes:{joined}");
+                    $"--no-chapters -o split-%03d.mkv \"{this._filename}\" --split timecodes:{joined}");
 
                 p.WaitForExit();
             }

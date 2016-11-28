@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b65b422b-99e2-4910-a36a-11b595267311" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/extract/AttachmentExtractor.cs" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/extract/AttachmentExtractor.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/info/MkvToolNixMkvInfoLoaderStrategy.cs" afterPath="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/info/MkvToolNixMkvInfoLoaderStrategy.cs" />
     </list>
     <ignored path="UnlinkMKV-GUI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,9 +32,9 @@
             <state relative-caret-position="272">
               <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
-                <marker date="1480196863561" expanded="true" signature="6:106" ph="..." />
-                <marker date="1480196863561" expanded="true" signature="128:346" ph="{...}" />
-                <marker date="1480196863561" expanded="true" signature="186:344" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="6:106" ph="..." />
+                <marker date="1480269627279" expanded="true" signature="128:346" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="186:344" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -41,76 +44,92 @@
         <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/FormApplication.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="159">
-              <caret line="174" column="56" selection-start-line="174" selection-start-column="56" selection-end-line="174" selection-end-column="56" />
+              <caret line="143" column="27" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="27" />
               <folding>
-                <marker date="1480199396344" expanded="true" signature="6:278" ph="..." />
-                <marker date="1480199396344" expanded="true" signature="304:9907" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="354:7150" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="513:1110" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="1149:2431" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="2503:2634" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="2703:2752" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="2822:2872" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="2931:3171" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="3222:3516" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="3563:3678" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="3747:4200" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="4252:4365" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="4436:4681" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="4757:5093" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="5135:6263" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="6310:6423" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="6513:7143" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="7156:7288" ph="/// A basic config file that is used to read and write to the config file provided by UnlinkMKV ... " />
-                <marker date="1480199396344" expanded="true" signature="7313:9904" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="7442:8451" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="8180:8440" ph="/* ffmpeg = $basedir/ffmpeg/bin/ffmpeg ... */" />
-                <marker date="1480199396344" expanded="true" signature="8461:8777" ph="/// This function should be invoked to set the paths properly when the config is being constructed.1 ... " />
-                <marker date="1480199396344" expanded="true" signature="8878:9055" ph="{...}" />
-                <marker date="1480199396344" expanded="true" signature="9366:9897" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="6:278" ph="..." />
+                <marker date="1480275073621" expanded="true" signature="304:9907" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="354:7150" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="513:1110" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="1149:2431" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="2503:2634" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="2703:2752" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="2822:2872" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="2931:3171" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="3222:3516" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="3563:3678" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="3747:4200" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="4252:4365" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="4436:4681" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="4757:5093" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="5135:6263" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="6310:6423" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="6513:7143" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="7156:7288" ph="/// A basic config file that is used to read and write to the config file provided by UnlinkMKV ... " />
+                <marker date="1480275073621" expanded="true" signature="7313:9904" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="7442:8451" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="8180:8440" ph="/* ffmpeg = $basedir/ffmpeg/bin/ffmpeg ... */" />
+                <marker date="1480275073621" expanded="true" signature="8461:8777" ph="/// This function should be invoked to set the paths properly when the config is being constructed.1 ... " />
+                <marker date="1480275073621" expanded="true" signature="8878:9055" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="9366:9897" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PerlJob.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PerlJob.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/legacy/PerlJob.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="42" column="63" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
+            <state relative-caret-position="344">
+              <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
               <folding>
-                <marker date="1480198754115" expanded="true" signature="6:141" ph="..." />
-                <marker date="1480198754115" expanded="true" signature="173:3009" ph="{...}" />
-                <marker date="1480198754115" expanded="true" signature="216:3007" ph="{...}" />
-                <marker date="1480198754115" expanded="true" signature="304:356" ph="{...}" />
-                <marker date="1480198754115" expanded="true" signature="458:3001" ph="{...}" />
-                <marker date="1480198754115" expanded="true" signature="1839:2129" ph="{...}" />
-                <marker date="1480198754115" expanded="true" signature="2551:2612" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="6:141" ph="..." />
+                <marker date="1480269627279" expanded="true" signature="173:3009" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="216:3007" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="304:356" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="458:3001" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="1839:2129" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="2551:2612" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MergeJob.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MergeJob.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+            <state relative-caret-position="315">
+              <caret line="150" column="32" selection-start-line="150" selection-start-column="32" selection-end-line="150" selection-end-column="32" />
               <folding>
-                <marker date="1480269582442" expanded="true" signature="6:232" ph="..." />
-                <marker date="1480269582442" expanded="true" signature="263:5727" ph="{...}" />
-                <marker date="1480269582442" expanded="true" signature="308:5725" ph="{...}" />
-                <marker date="1480269582442" expanded="true" signature="643:695" ph="{...}" />
-                <marker date="1480269582442" expanded="true" signature="800:1013" ph="{...}" />
-                <marker date="1480269582442" expanded="true" signature="1056:3350" ph="{...}" />
-                <marker date="1480269582442" expanded="true" signature="1938:2100" ph="/* Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too ... */" />
-                <marker date="1480269582442" expanded="true" signature="2480:2615" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
-                <marker date="1480269582442" expanded="true" signature="3386:4014" ph="{...}" />
-                <marker date="1480269582442" expanded="true" signature="3467:3711" ph="/* Removing chapters options helps with the following issues: ... */" />
-                <marker date="1480269582442" expanded="true" signature="4084:4333" ph="{...}" />
-                <marker date="1480269582442" expanded="true" signature="4393:4580" ph="{...}" />
-                <marker date="1480269582442" expanded="true" signature="4645:4983" ph="{...}" />
-                <marker date="1480269582442" expanded="true" signature="5040:5718" ph="{...}" />
+                <marker date="1480302053190" expanded="true" signature="6:232" ph="..." />
+                <marker date="1480302053190" expanded="true" signature="263:5731" ph="{...}" />
+                <marker date="1480302053190" expanded="true" signature="308:5729" ph="{...}" />
+                <marker date="1480302053190" expanded="true" signature="643:695" ph="{...}" />
+                <marker date="1480302053190" expanded="true" signature="800:1013" ph="{...}" />
+                <marker date="1480302053190" expanded="true" signature="1056:3350" ph="{...}" />
+                <marker date="1480302053190" expanded="true" signature="1938:2100" ph="/* Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too ... */" />
+                <marker date="1480302053190" expanded="true" signature="2480:2615" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
+                <marker date="1480302053190" expanded="true" signature="3386:4014" ph="{...}" />
+                <marker date="1480302053190" expanded="true" signature="3467:3711" ph="/* Removing chapters options helps with the following issues: ... */" />
+                <marker date="1480302053190" expanded="true" signature="4084:4333" ph="{...}" />
+                <marker date="1480302053190" expanded="true" signature="4393:4580" ph="{...}" />
+                <marker date="1480302053190" expanded="true" signature="4645:4983" ph="{...}" />
+                <marker date="1480302053190" expanded="true" signature="5040:5722" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MkvToolNixMkvInfoLoaderStrategy.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/info/MkvToolNixMkvInfoLoaderStrategy.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+              <folding>
+                <marker date="1480302095250" expanded="true" signature="6:128" ph="..." />
+                <marker date="1480302095250" expanded="true" signature="164:1529" ph="{...}" />
+                <marker date="1480302095250" expanded="true" signature="240:1527" ph="{...}" />
+                <marker date="1480302095250" expanded="true" signature="295:1521" ph="{...}" />
+                <marker date="1480302095250" expanded="true" signature="962:1169" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -119,20 +138,19 @@
       <file leaf-file-name="SegmentTimecodeSelector.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/SegmentTimecodeSelector.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="2074">
               <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
               <folding>
-                <marker date="1480195291796" expanded="true" signature="6:120" ph="..." />
-                <marker date="1480195291796" expanded="true" signature="151:5420" ph="{...}" />
-                <marker date="1480195291796" expanded="true" signature="194:5418" ph="{...}" />
-                <marker date="1480195291796" expanded="true" signature="234:572" ph="{...}" />
-                <marker date="1480195291796" expanded="true" signature="324:432" ph="{...}" />
-                <marker date="1480195291796" expanded="true" signature="810:1856" ph="{...}" />
-                <marker date="1480195291796" expanded="true" signature="1248:1526" ph="/* This means that we'll have to reconstruct the timecodes based on the order in the file ... */" />
-                <marker date="1480195291796" expanded="true" signature="1969:3660" ph="{...}" />
-                <marker date="1480195291796" expanded="true" signature="3006:3299" ph="/* We check the last string to handle the case where the user might have decided ... */" />
-                <marker date="1480195291796" expanded="true" signature="3751:4199" ph="{...}" />
-                <marker date="1480195291796" expanded="true" signature="4339:5412" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="6:120" ph="..." />
+                <marker date="1480269627279" expanded="true" signature="194:5418" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="234:572" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="324:432" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="810:1856" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="1248:1526" ph="/* This means that we'll have to reconstruct the timecodes based on the order in the file ... */" />
+                <marker date="1480269627279" expanded="true" signature="1969:3660" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="3006:3299" ph="/* We check the last string to handle the case where the user might have decided ... */" />
+                <marker date="1480269627279" expanded="true" signature="3751:4199" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="4339:5412" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -141,17 +159,16 @@
       <file leaf-file-name="TextBoxControlWriter.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/ui/TextBoxControlWriter.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="442">
               <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
               <folding>
-                <marker date="1480199511071" expanded="true" signature="6:115" ph="..." />
-                <marker date="1480199511071" expanded="true" signature="143:1102" ph="{...}" />
-                <marker date="1480199511071" expanded="true" signature="196:1100" ph="{...}" />
-                <marker date="1480199511071" expanded="true" signature="349:439" ph="{...}" />
-                <marker date="1480199511071" expanded="true" signature="486:563" ph="{...}" />
-                <marker date="1480199511071" expanded="true" signature="613:703" ph="{...}" />
-                <marker date="1480199511071" expanded="true" signature="822:919" ph="{...}" />
-                <marker date="1480199511071" expanded="true" signature="966:1093" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="6:115" ph="..." />
+                <marker date="1480269627279" expanded="true" signature="196:1100" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="349:439" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="486:563" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="613:703" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="822:919" ph="{...}" />
+                <marker date="1480269627279" expanded="true" signature="966:1093" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -163,60 +180,8 @@
             <state relative-caret-position="102">
               <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
               <folding>
-                <marker date="1480198354065" expanded="true" signature="6:73" ph="..." />
-                <marker date="1480198354065" expanded="true" signature="135:232" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PathUtility.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/PathUtility.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-              <folding>
-                <marker date="1479356771263" expanded="true" signature="6:30" ph="..." />
-                <marker date="1479356771263" expanded="true" signature="55:1969" ph="{...}" />
-                <marker date="1479356771263" expanded="true" signature="93:1967" ph="{...}" />
-                <marker date="1479356771263" expanded="true" signature="160:262" ph="/* Thanks! ... */" />
-                <marker date="1479356771263" expanded="true" signature="272:696" ph="/// Expands environment variables and, if unqualified, locates the exe in the working directory ... " />
-                <marker date="1479356771263" expanded="true" signature="749:1960" ph="{...}" />
-                <marker date="1479356771263" expanded="true" signature="773:1005" ph="/* Consulo vs Rider ... */" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormApplication.Designer.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/FormApplication.Designer.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3400">
-              <caret line="200" column="75" selection-start-line="200" selection-start-column="72" selection-end-line="200" selection-end-column="75" />
-              <folding>
-                <marker date="1439176577841" expanded="true" signature="23:10465" ph="{...}" />
-                <marker date="1439176577841" expanded="true" signature="59:10463" ph="{...}" />
-                <marker date="1439176577841" expanded="true" signature="74:150" ph="/// Required designer variable. ... " />
-                <marker date="1439176577841" expanded="true" signature="228:419" ph="/// Clean up any resources being used. ... " />
-                <marker date="1439176577841" expanded="true" signature="475:649" ph="{...}" />
-                <marker date="1439176577841" expanded="true" signature="659:9658" ph="Windows Form Designer generated code" />
-                <marker date="1439176577841" expanded="true" signature="713:876" ph="/// Required method for Designer support - do not modify ... " />
-                <marker date="1439176577841" expanded="true" signature="919:9638" ph="{...}" />
-                <marker date="1439176577841" expanded="true" signature="1988:2029" ph="/* label1 ... */" />
-                <marker date="1439176577841" expanded="true" signature="2341:2385" ph="/* textInput ... */" />
-                <marker date="1439176577841" expanded="true" signature="2670:2716" ph="/* buttonInput ... */" />
-                <marker date="1439176577841" expanded="true" signature="3158:3205" ph="/* buttonOutput ... */" />
-                <marker date="1439176577841" expanded="true" signature="3656:3701" ph="/* textOutput ... */" />
-                <marker date="1439176577841" expanded="true" signature="3992:4033" ph="/* label2 ... */" />
-                <marker date="1439176577841" expanded="true" signature="4346:4390" ph="/* groupBox1 ... */" />
-                <marker date="1439176577841" expanded="true" signature="4785:4836" ph="/* flowLayoutPanel1 ... */" />
-                <marker date="1439176577841" expanded="true" signature="5365:5409" ph="/* groupBox2 ... */" />
-                <marker date="1439176577841" expanded="true" signature="5799:5841" ph="/* textLog ... */" />
-                <marker date="1439176577841" expanded="true" signature="6219:6267" ph="/* buttonExecute ... */" />
-                <marker date="1439176577841" expanded="true" signature="6731:6777" ph="/* buttonAbort ... */" />
-                <marker date="1439176577841" expanded="true" signature="7269:7316" ph="/* buttonIssues ... */" />
-                <marker date="1439176577841" expanded="true" signature="7740:7781" ph="/* label3 ... */" />
-                <marker date="1439176577841" expanded="true" signature="8191:8241" ph="/* FormApplication ... */" />
+                <marker date="1480269627279" expanded="true" signature="6:73" ph="..." />
+                <marker date="1480269627279" expanded="true" signature="135:232" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -225,23 +190,40 @@
       <file leaf-file-name="Validators.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/Valdiators/Validators.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1989">
-              <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+            <state relative-caret-position="153">
+              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
               <folding>
-                <marker date="1460579190586" expanded="true" signature="6:91" ph="..." />
-                <marker date="1460579190586" expanded="true" signature="127:4392" ph="{...}" />
-                <marker date="1460579190586" expanded="true" signature="187:2751" ph="{...}" />
-                <marker date="1460579190586" expanded="true" signature="231:316" ph="{...}" />
-                <marker date="1460579190586" expanded="true" signature="356:791" ph="{...}" />
-                <marker date="1460579190586" expanded="true" signature="836:2745" ph="{...}" />
-                <marker date="1460579190586" expanded="true" signature="2815:3556" ph="{...}" />
-                <marker date="1460579190586" expanded="true" signature="2859:2938" ph="{...}" />
-                <marker date="1460579190586" expanded="true" signature="2978:3352" ph="{...}" />
-                <marker date="1460579190586" expanded="true" signature="3397:3550" ph="{...}" />
-                <marker date="1460579190586" expanded="true" signature="3615:4388" ph="{...}" />
-                <marker date="1460579190586" expanded="true" signature="3659:3733" ph="{...}" />
-                <marker date="1460579190586" expanded="true" signature="3773:4089" ph="{...}" />
-                <marker date="1460579190586" expanded="true" signature="4134:4382" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="6:91" ph="..." />
+                <marker date="1480275073621" expanded="true" signature="127:4450" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="187:644" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="187:2809" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="231:316" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="356:644" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="894:2803" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="2873:3614" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="2917:2996" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="3036:3410" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="3455:3608" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="3674:4446" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="3718:3792" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="3933:4147" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="3933:4446" ph="{...}" />
+                <marker date="1480275073621" expanded="true" signature="4192:4440" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttachmentExtractor.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/extract/AttachmentExtractor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+              <folding>
+                <marker date="1480302015943" expanded="true" signature="6:51" ph="..." />
+                <marker date="1480302015943" expanded="true" signature="90:773" ph="{...}" />
+                <marker date="1480302015943" expanded="true" signature="152:771" ph="{...}" />
+                <marker date="1480302015943" expanded="true" signature="232:765" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -267,13 +249,11 @@
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/PathUtil.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/data/MkvEdition.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/SegmentUtility.cs" />
-        <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/extract/AttachmentExtractor.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/extract/BaseMatroskaExtractor.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/ChapterSelector.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/data/MkvSegmentUid.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI.Tests/data/XmlMkvInfoSummaryMapperTest.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/data/xml/XmlMkvInfoSummaryMapper.cs" />
-        <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/info/MkvToolNixMkvInfoLoaderStrategy.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/TimeCodeUtil.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/data/MKVInfo.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/data/ChapterAtom.cs" />
@@ -288,7 +268,9 @@
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/FormApplication.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/ui/TextBoxControlWriter.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/SegmentTimecodeSelector.cs" />
+        <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/extract/AttachmentExtractor.cs" />
         <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs" />
+        <option value="$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/info/MkvToolNixMkvInfoLoaderStrategy.cs" />
       </list>
     </option>
   </component>
@@ -385,6 +367,24 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Valdiators" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UnlinkMKV-GUI (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UnlinkMKV-GUI" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
@@ -458,12 +458,13 @@
       <workItem from="1479775591647" duration="2266000" />
       <workItem from="1479777882704" duration="1461000" />
       <workItem from="1479779373143" duration="18704000" />
-      <workItem from="1480198540685" duration="6581000" />
+      <workItem from="1480198540685" duration="8558000" />
+      <workItem from="1480301976743" duration="247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63095000" />
+    <option name="totallyTimeSpent" value="65319000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -489,6 +490,7 @@
       <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16403785" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285124" sideWeight="0.49789694" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973711" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23347108" sideWeight="0.52733964" order="3" side_tool="false" content_ui="tabs" />
@@ -497,7 +499,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -516,9 +517,9 @@
         <state relative-caret-position="459">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <marker date="1480196863561" expanded="true" signature="6:106" ph="..." />
-            <marker date="1480196863561" expanded="true" signature="128:346" ph="{...}" />
-            <marker date="1480196863561" expanded="true" signature="186:344" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="6:106" ph="..." />
+            <marker date="1480269627279" expanded="true" signature="128:346" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="186:344" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -563,20 +564,20 @@
         <state relative-caret-position="1207">
           <caret line="71" column="111" selection-start-line="71" selection-start-column="111" selection-end-line="71" selection-end-column="111" />
           <folding>
-            <marker date="1480269582442" expanded="true" signature="6:232" ph="..." />
-            <marker date="1480269582442" expanded="true" signature="263:5727" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="308:5725" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="643:695" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="800:1013" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="1056:3350" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="1938:2100" ph="/* Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too ... */" />
-            <marker date="1480269582442" expanded="true" signature="2480:2615" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
-            <marker date="1480269582442" expanded="true" signature="3386:4014" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="3467:3711" ph="/* Removing chapters options helps with the following issues: ... */" />
-            <marker date="1480269582442" expanded="true" signature="4084:4333" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="4393:4580" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="4645:4983" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="5040:5718" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="6:232" ph="..." />
+            <marker date="1480302053190" expanded="true" signature="263:5731" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="308:5729" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="643:695" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="800:1013" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="1056:3350" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="1938:2100" ph="/* Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too ... */" />
+            <marker date="1480302053190" expanded="true" signature="2480:2615" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
+            <marker date="1480302053190" expanded="true" signature="3386:4014" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="3467:3711" ph="/* Removing chapters options helps with the following issues: ... */" />
+            <marker date="1480302053190" expanded="true" signature="4084:4333" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="4393:4580" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="4645:4983" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="5040:5722" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -593,9 +594,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1480196863561" expanded="true" signature="6:106" ph="..." />
-            <marker date="1480196863561" expanded="true" signature="128:346" ph="{...}" />
-            <marker date="1480196863561" expanded="true" signature="186:344" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="6:106" ph="..." />
+            <marker date="1480269627279" expanded="true" signature="128:346" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="186:344" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -674,13 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/extract/AttachmentExtractor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -775,13 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/info/MkvToolNixMkvInfoLoaderStrategy.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/data/ChapterAtom.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -814,15 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1480197041170" expanded="true" signature="6:107" ph="..." />
-            <marker date="1480197041170" expanded="true" signature="132:1731" ph="{...}" />
-            <marker date="1480197041170" expanded="true" signature="180:1729" ph="{...}" />
-            <marker date="1480197041170" expanded="true" signature="217:445" ph="{...}" />
-            <marker date="1480197041170" expanded="true" signature="487:1508" ph="{...}" />
-            <marker date="1480197041170" expanded="true" signature="1577:1599" ph="{...}" />
-            <marker date="1480197041170" expanded="true" signature="1669:1722" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -863,13 +841,13 @@
         <state relative-caret-position="323">
           <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding>
-            <marker date="1479356771263" expanded="true" signature="6:30" ph="..." />
-            <marker date="1479356771263" expanded="true" signature="55:1969" ph="{...}" />
-            <marker date="1479356771263" expanded="true" signature="93:1967" ph="{...}" />
-            <marker date="1479356771263" expanded="true" signature="160:262" ph="/* Thanks! ... */" />
-            <marker date="1479356771263" expanded="true" signature="272:696" ph="/// Expands environment variables and, if unqualified, locates the exe in the working directory ... " />
-            <marker date="1479356771263" expanded="true" signature="749:1960" ph="{...}" />
-            <marker date="1479356771263" expanded="true" signature="773:1005" ph="/* Consulo vs Rider ... */" />
+            <marker date="1480269627279" expanded="true" signature="6:30" ph="..." />
+            <marker date="1480269627279" expanded="true" signature="55:1969" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="93:1967" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="160:262" ph="/* Thanks! ... */" />
+            <marker date="1480269627279" expanded="true" signature="272:696" ph="/// Expands environment variables and, if unqualified, locates the exe in the working directory ... " />
+            <marker date="1480269627279" expanded="true" signature="749:1960" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="773:1005" ph="/* Consulo vs Rider ... */" />
           </folding>
         </state>
       </provider>
@@ -880,47 +858,8 @@
         <state relative-caret-position="102">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
           <folding>
-            <marker date="1480198354065" expanded="true" signature="6:73" ph="..." />
-            <marker date="1480198354065" expanded="true" signature="135:232" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/Valdiators/Validators.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
-          <folding>
-            <marker date="1460579190586" expanded="true" signature="6:91" ph="..." />
-            <marker date="1460579190586" expanded="true" signature="127:4392" ph="{...}" />
-            <marker date="1460579190586" expanded="true" signature="187:2751" ph="{...}" />
-            <marker date="1460579190586" expanded="true" signature="231:316" ph="{...}" />
-            <marker date="1460579190586" expanded="true" signature="356:791" ph="{...}" />
-            <marker date="1460579190586" expanded="true" signature="836:2745" ph="{...}" />
-            <marker date="1460579190586" expanded="true" signature="2815:3556" ph="{...}" />
-            <marker date="1460579190586" expanded="true" signature="2859:2938" ph="{...}" />
-            <marker date="1460579190586" expanded="true" signature="2978:3352" ph="{...}" />
-            <marker date="1460579190586" expanded="true" signature="3397:3550" ph="{...}" />
-            <marker date="1460579190586" expanded="true" signature="3615:4388" ph="{...}" />
-            <marker date="1460579190586" expanded="true" signature="3659:3733" ph="{...}" />
-            <marker date="1460579190586" expanded="true" signature="3773:4089" ph="{...}" />
-            <marker date="1460579190586" expanded="true" signature="4134:4382" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/legacy/PerlJob.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="42" column="63" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
-          <folding>
-            <marker date="1480198754115" expanded="true" signature="6:141" ph="..." />
-            <marker date="1480198754115" expanded="true" signature="173:3009" ph="{...}" />
-            <marker date="1480198754115" expanded="true" signature="216:3007" ph="{...}" />
-            <marker date="1480198754115" expanded="true" signature="304:356" ph="{...}" />
-            <marker date="1480198754115" expanded="true" signature="458:3001" ph="{...}" />
-            <marker date="1480198754115" expanded="true" signature="1839:2129" ph="{...}" />
-            <marker date="1480198754115" expanded="true" signature="2551:2612" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="6:73" ph="..." />
+            <marker date="1480269627279" expanded="true" signature="135:232" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -930,26 +869,82 @@
         <state relative-caret-position="272">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <marker date="1480196863561" expanded="true" signature="6:106" ph="..." />
-            <marker date="1480196863561" expanded="true" signature="128:346" ph="{...}" />
-            <marker date="1480196863561" expanded="true" signature="186:344" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="6:106" ph="..." />
+            <marker date="1480269627279" expanded="true" signature="128:346" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="186:344" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/ui/TextBoxControlWriter.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="442">
           <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding>
-            <marker date="1480199511071" expanded="true" signature="6:115" ph="..." />
-            <marker date="1480199511071" expanded="true" signature="143:1102" ph="{...}" />
-            <marker date="1480199511071" expanded="true" signature="196:1100" ph="{...}" />
-            <marker date="1480199511071" expanded="true" signature="349:439" ph="{...}" />
-            <marker date="1480199511071" expanded="true" signature="486:563" ph="{...}" />
-            <marker date="1480199511071" expanded="true" signature="613:703" ph="{...}" />
-            <marker date="1480199511071" expanded="true" signature="822:919" ph="{...}" />
-            <marker date="1480199511071" expanded="true" signature="966:1093" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="6:115" ph="..." />
+            <marker date="1480269627279" expanded="true" signature="196:1100" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="349:439" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="486:563" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="613:703" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="822:919" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="966:1093" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/SegmentTimecodeSelector.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2074">
+          <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
+          <folding>
+            <marker date="1480269627279" expanded="true" signature="6:120" ph="..." />
+            <marker date="1480269627279" expanded="true" signature="194:5418" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="234:572" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="324:432" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="810:1856" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="1248:1526" ph="/* This means that we'll have to reconstruct the timecodes based on the order in the file ... */" />
+            <marker date="1480269627279" expanded="true" signature="1969:3660" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="3006:3299" ph="/* We check the last string to handle the case where the user might have decided ... */" />
+            <marker date="1480269627279" expanded="true" signature="3751:4199" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="4339:5412" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/extract/AttachmentExtractor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <marker date="1480302015943" expanded="true" signature="6:51" ph="..." />
+            <marker date="1480302015943" expanded="true" signature="90:773" ph="{...}" />
+            <marker date="1480302015943" expanded="true" signature="152:771" ph="{...}" />
+            <marker date="1480302015943" expanded="true" signature="232:765" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/Valdiators/Validators.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <marker date="1480275073621" expanded="true" signature="6:91" ph="..." />
+            <marker date="1480275073621" expanded="true" signature="127:4450" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="187:644" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="187:2809" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="231:316" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="356:644" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="894:2803" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="2873:3614" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="2917:2996" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="3036:3410" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="3455:3608" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="3674:4446" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="3718:3792" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="3933:4147" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="3933:4446" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="4192:4440" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -957,76 +952,86 @@
     <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/FormApplication.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
-          <caret line="174" column="56" selection-start-line="174" selection-start-column="56" selection-end-line="174" selection-end-column="56" />
+          <caret line="143" column="27" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="27" />
           <folding>
-            <marker date="1480199396344" expanded="true" signature="6:278" ph="..." />
-            <marker date="1480199396344" expanded="true" signature="304:9907" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="354:7150" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="513:1110" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="1149:2431" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="2503:2634" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="2703:2752" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="2822:2872" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="2931:3171" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="3222:3516" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="3563:3678" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="3747:4200" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="4252:4365" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="4436:4681" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="4757:5093" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="5135:6263" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="6310:6423" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="6513:7143" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="7156:7288" ph="/// A basic config file that is used to read and write to the config file provided by UnlinkMKV ... " />
-            <marker date="1480199396344" expanded="true" signature="7313:9904" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="7442:8451" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="8180:8440" ph="/* ffmpeg = $basedir/ffmpeg/bin/ffmpeg ... */" />
-            <marker date="1480199396344" expanded="true" signature="8461:8777" ph="/// This function should be invoked to set the paths properly when the config is being constructed.1 ... " />
-            <marker date="1480199396344" expanded="true" signature="8878:9055" ph="{...}" />
-            <marker date="1480199396344" expanded="true" signature="9366:9897" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/SegmentTimecodeSelector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
-          <folding>
-            <marker date="1480195291796" expanded="true" signature="6:120" ph="..." />
-            <marker date="1480195291796" expanded="true" signature="151:5420" ph="{...}" />
-            <marker date="1480195291796" expanded="true" signature="194:5418" ph="{...}" />
-            <marker date="1480195291796" expanded="true" signature="234:572" ph="{...}" />
-            <marker date="1480195291796" expanded="true" signature="324:432" ph="{...}" />
-            <marker date="1480195291796" expanded="true" signature="810:1856" ph="{...}" />
-            <marker date="1480195291796" expanded="true" signature="1248:1526" ph="/* This means that we'll have to reconstruct the timecodes based on the order in the file ... */" />
-            <marker date="1480195291796" expanded="true" signature="1969:3660" ph="{...}" />
-            <marker date="1480195291796" expanded="true" signature="3006:3299" ph="/* We check the last string to handle the case where the user might have decided ... */" />
-            <marker date="1480195291796" expanded="true" signature="3751:4199" ph="{...}" />
-            <marker date="1480195291796" expanded="true" signature="4339:5412" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="6:278" ph="..." />
+            <marker date="1480275073621" expanded="true" signature="304:9907" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="354:7150" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="513:1110" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="1149:2431" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="2503:2634" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="2703:2752" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="2822:2872" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="2931:3171" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="3222:3516" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="3563:3678" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="3747:4200" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="4252:4365" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="4436:4681" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="4757:5093" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="5135:6263" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="6310:6423" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="6513:7143" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="7156:7288" ph="/// A basic config file that is used to read and write to the config file provided by UnlinkMKV ... " />
+            <marker date="1480275073621" expanded="true" signature="7313:9904" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="7442:8451" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="8180:8440" ph="/* ffmpeg = $basedir/ffmpeg/bin/ffmpeg ... */" />
+            <marker date="1480275073621" expanded="true" signature="8461:8777" ph="/// This function should be invoked to set the paths properly when the config is being constructed.1 ... " />
+            <marker date="1480275073621" expanded="true" signature="8878:9055" ph="{...}" />
+            <marker date="1480275073621" expanded="true" signature="9366:9897" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/MergeJob.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+        <state relative-caret-position="315">
+          <caret line="150" column="32" selection-start-line="150" selection-start-column="32" selection-end-line="150" selection-end-column="32" />
           <folding>
-            <marker date="1480269582442" expanded="true" signature="6:232" ph="..." />
-            <marker date="1480269582442" expanded="true" signature="263:5727" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="308:5725" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="643:695" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="800:1013" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="1056:3350" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="1938:2100" ph="/* Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too ... */" />
-            <marker date="1480269582442" expanded="true" signature="2480:2615" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
-            <marker date="1480269582442" expanded="true" signature="3386:4014" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="3467:3711" ph="/* Removing chapters options helps with the following issues: ... */" />
-            <marker date="1480269582442" expanded="true" signature="4084:4333" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="4393:4580" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="4645:4983" ph="{...}" />
-            <marker date="1480269582442" expanded="true" signature="5040:5718" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="6:232" ph="..." />
+            <marker date="1480302053190" expanded="true" signature="263:5731" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="308:5729" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="643:695" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="800:1013" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="1056:3350" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="1938:2100" ph="/* Step 2: Extract all attachments from the current segments ++ extract out the main attachments, too ... */" />
+            <marker date="1480302053190" expanded="true" signature="2480:2615" ph="/* Step 5: Let's rebuild the file... the timecodes can tell us quite a bit but let's use the fully ... */" />
+            <marker date="1480302053190" expanded="true" signature="3386:4014" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="3467:3711" ph="/* Removing chapters options helps with the following issues: ... */" />
+            <marker date="1480302053190" expanded="true" signature="4084:4333" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="4393:4580" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="4645:4983" ph="{...}" />
+            <marker date="1480302053190" expanded="true" signature="5040:5722" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/merge/info/MkvToolNixMkvInfoLoaderStrategy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <marker date="1480302095250" expanded="true" signature="6:128" ph="..." />
+            <marker date="1480302095250" expanded="true" signature="164:1529" ph="{...}" />
+            <marker date="1480302095250" expanded="true" signature="240:1527" ph="{...}" />
+            <marker date="1480302095250" expanded="true" signature="295:1521" ph="{...}" />
+            <marker date="1480302095250" expanded="true" signature="962:1169" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../UnlinkMKV-GUI/legacy/PerlJob.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+          <folding>
+            <marker date="1480269627279" expanded="true" signature="6:141" ph="..." />
+            <marker date="1480269627279" expanded="true" signature="173:3009" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="216:3007" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="304:356" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="458:3001" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="1839:2129" ph="{...}" />
+            <marker date="1480269627279" expanded="true" signature="2551:2612" ph="{...}" />
           </folding>
         </state>
       </provider>

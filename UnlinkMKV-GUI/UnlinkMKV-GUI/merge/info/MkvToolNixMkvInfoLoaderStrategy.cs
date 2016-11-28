@@ -10,7 +10,7 @@ namespace UnlinkMKV_GUI.merge.info
     {
         public MkvInfo FetchMkvInfo(string file)
         {
-            var proc = new Process {StartInfo = new ProcessStartInfo("mkvinfo", file) {RedirectStandardOutput = true, UseShellExecute =  false}};
+            var proc = new Process {StartInfo = new ProcessStartInfo("mkvinfo", $"\"{file}\"") {RedirectStandardOutput = true, UseShellExecute =  false}};
 
             if (proc == null)
             {
@@ -28,7 +28,7 @@ namespace UnlinkMKV_GUI.merge.info
             var mediaInfoProc = new Process
             {
                 StartInfo =
-                    new ProcessStartInfo("mediainfo", $"--Inform=\"Video;%Duration/String3%\" {file}") {RedirectStandardOutput = true, UseShellExecute = false}
+                    new ProcessStartInfo("mediainfo", $"--Inform=\"Video;%Duration/String3%\" \"{file}\"") {RedirectStandardOutput = true, UseShellExecute = false}
             };
 
             mediaInfoProc.Start();

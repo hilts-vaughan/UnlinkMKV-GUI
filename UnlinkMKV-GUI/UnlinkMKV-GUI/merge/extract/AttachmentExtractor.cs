@@ -18,7 +18,7 @@ namespace UnlinkMKV_GUI.merge.extract
             {
                 joinedCounts  += $"{i + 1} ";
             }
-            var proc = Process.Start("mkvextract", $"attachments {segment.Filename} {joinedCounts}");
+            var proc = Process.Start("mkvextract", $"attachments \"{segment.Filename}\" {joinedCounts}");
             proc.WaitForExit();
         }
     }
