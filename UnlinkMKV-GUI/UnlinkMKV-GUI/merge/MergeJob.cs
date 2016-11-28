@@ -71,7 +71,7 @@ namespace UnlinkMKV_GUI.merge
                     // built "order"
                     RebuildFile();
 
-                    File.Move(Path.Combine(workingDir, $"{_baseFilename}"), Path.Combine(_destination, _baseFilename));
+                    File.Move(Path.Combine(workingDir, _baseFilename), Path.Combine(_destination, _baseFilename));
                     Console.WriteLine("Job complete!");
                 }
                 catch (Exception e)
