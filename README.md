@@ -70,11 +70,12 @@ If you're running on Linux, you will need to look up how to get the tools above 
 
 Using Perl backend:
 
-You will probably need `Log::Log4perl` and `XML::LibXML` for your Perl installation. You can do this step just in case if you're not sure if it's installed. 
+You will probably need `Log::Log4perl`, `XML::LibXML` and `String:CRC32` for your Perl installation. You can do this step just in case if you're not sure if it's installed. 
 
 1. Open a terminal or command prompt on your operating system
 2. Type `cpan Log::Log4perl` and then press return/enter
 3. Repeat step 2, but type `cpan XML::LibXML` instead
+3. Repeat step 3, but type `cpan String:CRC32` instead
 4. The CPAN manager should install the logging module, and the XML module, you should be able to exit the terminal now.
 
 If you are using Mono, the first run always takes a little bit (about a minute). Please be patient.
